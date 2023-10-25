@@ -6,9 +6,9 @@
     "required_event": "character_wields_item",
     "condition": {
       "or": [
-        { "u_has_wielded_with_flag": "FLIGHT_KILLER_1" },
-        { "u_has_wielded_with_flag": "FLIGHT_KILLER_2" },
-        { "u_has_wielded_with_flag": "FLIGHT_KILLER_3" }
+        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_1" },
+        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_2" },
+        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_3" }
       ]
     },
     "effect": { "u_add_effect": "random_enchant_FLIGHT_KILLER", "duration": "PERMANENT" },
@@ -44,10 +44,11 @@
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
     "effect": "attack",
     "shape": "blast",
+    "damage_type": "pure",
     "max_level": 10,
     "base_casting_time": 0,
     "min_range": 1,
-    "min_damage": 5,
+    "min_damage": 0,
     "max_damage": 20,
     "damage_increment": 5
   },
@@ -58,14 +59,18 @@
     "effect": {
       "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_3" },
       "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 3, "max_level": 3 } },
-      "else": {
-        "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_2" },
-        "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 2, "max_level": 2 } },
-        "else": {
-          "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_1" },
-          "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 1, "max_level": 1 } }
+      "else": [
+        {
+          "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_2" },
+          "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 2, "max_level": 2 } },
+          "else": [
+            {
+              "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_1" },
+              "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 1, "max_level": 1 } }
+            }
+          ]
         }
-      }
+      ]
     }
   }
 ]

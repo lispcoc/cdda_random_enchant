@@ -26,7 +26,7 @@ list.forEach( e => {
         var j = {}
         j.id = "random_enchant_" + e.id + "_" + i
         j.type = "json_flag"
-        j.info = "<good>" + e.name + "Lv:" + i + "</good>"
+        j.info = "[<good>" + e.name + "Lv:" + i + "</good>]" + e.info
         json.push(j)
         eoc.effect[0].cases.push(
             { "case": i, "effect": { "set_string_var": j.id, "target_var": { "var_val": "target" } } }
@@ -35,10 +35,23 @@ list.forEach( e => {
     eocs.push(eoc)
 })
 
-var info1 = json.map( e => {
-    return { "if": { "u_has_flag": e.id }, "then": {"npc_set_flag": e.id } }
+var eff1 = json.map( e => {
+    return { "if": { "npc_has_flag": e.id }, "then": [{"math": ["u_" + e.id, "=", "1"] }], "else": [{"math": ["u_" + e.id, "=", "0"] }] }
+})
+var eff2 = json.map( e => {
+    return { "if": {"math": ["u_" + e.id, "==", "1"] }, "then": [{"npc_set_flag":  e.id }, { "u_message": e.id }] }
+})
+
+json.push({
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_before",
+    "effect": eff1
+})
+json.push({
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_after",
+    "effect": eff2
 })
 
 fs.writeFileSync("flags.json", JSON.stringify(json, null, "  "))
 fs.writeFileSync("lottery/lottery_flags.json", JSON.stringify(eocs, null, "  "))
-fs.writeFileSync("tmp.json", JSON.stringify(info1, null, "  "))

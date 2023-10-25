@@ -20,20 +20,14 @@
     "id": "EOC_random_enchant_melee_attacks_[DRAIN_HP]",
     "effect": [
       {
-        "if": {
-          "u_has_wielded_with_flag": "DRAIN_HP_3",
-          "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 3, "max_level": 3 } },
+        "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_HP_3" },
+        "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 3, "max_level": 3 } },
+        "else": {
+          "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_HP_2" },
+          "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 2, "max_level": 2 } },
           "else": {
-            "if": {
-              "u_has_wielded_with_flag": "DRAIN_HP_2",
-              "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 2, "max_level": 2 } },
-              "else": {
-                "if": {
-                  "u_has_wielded_with_flag": "DRAIN_HP_1",
-                  "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 1, "max_level": 1 } }
-                }
-              }
-            }
+            "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_HP_1" },
+            "then": { "u_cast_spell": { "id": "spell_random_enchant_DRAIN_HP", "min_level": 1, "max_level": 1 } }
           }
         }
       }
@@ -51,7 +45,7 @@
     "max_level": 10,
     "base_casting_time": 0,
     "min_range": 1,
-    "min_damage": -1,
+    "min_damage": 0,
     "max_damage": -10,
     "damage_increment": -1
   }

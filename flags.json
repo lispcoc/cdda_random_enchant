@@ -2,76 +2,223 @@
   {
     "id": "random_enchant_ZOMBIE_KILLER_1",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻Lv:1</good>"
+    "info": "[<good>ゾンビ特攻Lv:1</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_ZOMBIE_KILLER_2",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻Lv:2</good>"
+    "info": "[<good>ゾンビ特攻Lv:2</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_ZOMBIE_KILLER_3",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻Lv:3</good>"
+    "info": "[<good>ゾンビ特攻Lv:3</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_1",
     "type": "json_flag",
-    "info": "<good>飛行特攻Lv:1</good>"
+    "info": "[<good>飛行特攻Lv:1</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_2",
     "type": "json_flag",
-    "info": "<good>飛行特攻Lv:2</good>"
+    "info": "[<good>飛行特攻Lv:2</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_3",
     "type": "json_flag",
-    "info": "<good>飛行特攻Lv:3</good>"
+    "info": "[<good>飛行特攻Lv:3</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
   },
   {
     "id": "random_enchant_DRAIN_HP_1",
     "type": "json_flag",
-    "info": "<good>HP回復Lv:1</good>"
+    "info": "[<good>HP回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
   },
   {
     "id": "random_enchant_DRAIN_HP_2",
     "type": "json_flag",
-    "info": "<good>HP回復Lv:2</good>"
+    "info": "[<good>HP回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
   },
   {
     "id": "random_enchant_DRAIN_HP_3",
     "type": "json_flag",
-    "info": "<good>HP回復Lv:3</good>"
+    "info": "[<good>HP回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
   },
   {
     "id": "random_enchant_DRAIN_MANA_1",
     "type": "json_flag",
-    "info": "<good>マナ回復Lv:1</good>"
+    "info": "[<good>マナ回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
   },
   {
     "id": "random_enchant_DRAIN_MANA_2",
     "type": "json_flag",
-    "info": "<good>マナ回復Lv:2</good>"
+    "info": "[<good>マナ回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
   },
   {
     "id": "random_enchant_DRAIN_MANA_3",
     "type": "json_flag",
-    "info": "<good>マナ回復Lv:3</good>"
+    "info": "[<good>マナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
   },
   {
     "id": "random_enchant_STOP_TIME_1",
     "type": "json_flag",
-    "info": "<good>時間停止Lv:1</good>"
+    "info": "[<good>時間停止Lv:1</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
   },
   {
     "id": "random_enchant_STOP_TIME_2",
     "type": "json_flag",
-    "info": "<good>時間停止Lv:2</good>"
+    "info": "[<good>時間停止Lv:2</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
   },
   {
     "id": "random_enchant_STOP_TIME_3",
     "type": "json_flag",
-    "info": "<good>時間停止Lv:3</good>"
+    "info": "[<good>時間停止Lv:3</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_before",
+    "effect": [
+      {
+        "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_1" },
+        "then": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_1", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_1", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_2" },
+        "then": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_2", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_2", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_3" },
+        "then": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_3", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_ZOMBIE_KILLER_3", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_1" },
+        "then": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_1", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_1", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_2" },
+        "then": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_2", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_2", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_3" },
+        "then": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_3", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_FLIGHT_KILLER_3", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_HP_1" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_HP_1", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_HP_1", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_HP_2" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_HP_2", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_HP_2", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_HP_3" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_HP_3", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_HP_3", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_1" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_MANA_1", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_MANA_1", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_2" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_MANA_2", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_MANA_2", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_3" },
+        "then": [ { "math": [ "u_random_enchant_DRAIN_MANA_3", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_DRAIN_MANA_3", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_STOP_TIME_1" },
+        "then": [ { "math": [ "u_random_enchant_STOP_TIME_1", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_STOP_TIME_1", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_STOP_TIME_2" },
+        "then": [ { "math": [ "u_random_enchant_STOP_TIME_2", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_STOP_TIME_2", "=", "0" ] } ]
+      },
+      {
+        "if": { "npc_has_flag": "random_enchant_STOP_TIME_3" },
+        "then": [ { "math": [ "u_random_enchant_STOP_TIME_3", "=", "1" ] } ],
+        "else": [ { "math": [ "u_random_enchant_STOP_TIME_3", "=", "0" ] } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_after",
+    "effect": [
+      {
+        "if": { "math": [ "u_random_enchant_ZOMBIE_KILLER_1", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" }, { "u_message": "random_enchant_ZOMBIE_KILLER_1" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_ZOMBIE_KILLER_2", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" }, { "u_message": "random_enchant_ZOMBIE_KILLER_2" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_ZOMBIE_KILLER_3", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" }, { "u_message": "random_enchant_ZOMBIE_KILLER_3" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_FLIGHT_KILLER_1", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" }, { "u_message": "random_enchant_FLIGHT_KILLER_1" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_FLIGHT_KILLER_2", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" }, { "u_message": "random_enchant_FLIGHT_KILLER_2" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_FLIGHT_KILLER_3", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" }, { "u_message": "random_enchant_FLIGHT_KILLER_3" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_HP_1", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_1" }, { "u_message": "random_enchant_DRAIN_HP_1" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_HP_2", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_2" }, { "u_message": "random_enchant_DRAIN_HP_2" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_HP_3", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_3" }, { "u_message": "random_enchant_DRAIN_HP_3" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_MANA_1", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_1" }, { "u_message": "random_enchant_DRAIN_MANA_1" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_MANA_2", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_2" }, { "u_message": "random_enchant_DRAIN_MANA_2" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_DRAIN_MANA_3", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_3" }, { "u_message": "random_enchant_DRAIN_MANA_3" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_STOP_TIME_1", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_1" }, { "u_message": "random_enchant_STOP_TIME_1" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_STOP_TIME_2", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_2" }, { "u_message": "random_enchant_STOP_TIME_2" } ]
+      },
+      {
+        "if": { "math": [ "u_random_enchant_STOP_TIME_3", "==", "1" ] },
+        "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_3" }, { "u_message": "random_enchant_STOP_TIME_3" } ]
+      }
+    ]
   }
 ]

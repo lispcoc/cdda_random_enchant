@@ -3,13 +3,14 @@
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_lottery_main",
     "effect": [
-      { "math": [ "_current", "=", "1" ] },
+      { "math": [ "u_random_enchant_current", "=", "1" ] },
+      { "set_condition": "cond", "condition": { "math": [ "u_random_enchant_current", "<=", "3" ] } },
       {
         "run_eoc_until": {
           "id": "EOC_random_enchant_lottery_nest",
           "effect": [
             {
-              "switch": { "math": [ "_current" ] },
+              "switch": { "math": [ "u_random_enchant_current" ] },
               "cases": [
                 { "case": 1, "effect": { "set_string_var": "random_enchant_f_1", "target_var": { "context_val": "target" } } },
                 {
@@ -43,14 +44,12 @@
                 ]
               }
             },
-            { "math": [ "_current", "+=", "1" ] }
+            { "math": [ "u_random_enchant_current", "+=", "1" ] }
           ]
         },
-        "condition": { "math": [ "random_enchant_current", "<=", "3" ] }
+        "condition": "cond"
       },
-      {
-        "u_message": "<global_val:random_enchant_f_1> <global_val:random_enchant_f_2> <global_val:random_enchant_f_3>"
-      }
+      { "u_message": "<context_val:difficulty>" }
     ]
   }
 ]

@@ -18,75 +18,15 @@
         {
           "id": "EOC_random_enchant_enchant_crystal",
           "effect": [
+            { "run_eocs": "EOC_random_enchant_set_flag_before" },
             {
-              "npc_run_inv_eocs": "manual",
+              "u_run_inv_eocs": "manual",
               "title": "対象は？",
               "true_eocs": [
                 {
                   "id": "EOC_random_enchant_enchant_crystal_run",
-                  "effect": [
-                    { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" },
-                    {
-                      "if": { "u_has_flag": "random_enchant_ZOMBIE_KILLER_1" },
-                      "then": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_ZOMBIE_KILLER_2" },
-                      "then": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_ZOMBIE_KILLER_3" },
-                      "then": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_FLIGHT_KILLER_1" },
-                      "then": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_FLIGHT_KILLER_2" },
-                      "then": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_FLIGHT_KILLER_3" },
-                      "then": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_HP_1" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_HP_1" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_HP_2" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_HP_2" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_HP_3" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_HP_3" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_MANA_1" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_MANA_1" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_MANA_2" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_MANA_2" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_DRAIN_MANA_3" },
-                      "then": { "npc_set_flag": "random_enchant_DRAIN_MANA_3" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_STOP_TIME_1" },
-                      "then": { "npc_set_flag": "random_enchant_STOP_TIME_1" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_STOP_TIME_2" },
-                      "then": { "npc_set_flag": "random_enchant_STOP_TIME_2" }
-                    },
-                    {
-                      "if": { "u_has_flag": "random_enchant_STOP_TIME_3" },
-                      "then": { "npc_set_flag": "random_enchant_STOP_TIME_3" }
-                    }
-                  ]
+                  "condition": { "not": { "npc_has_flag": "random_enchant_ALREADY_ENCHANT" } },
+                  "effect": [ { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" }, { "run_eocs": "EOC_random_enchant_set_flag_after" } ]
                 }
               ]
             }
