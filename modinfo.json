@@ -1,0 +1,16 @@
+[
+  {
+    "type": "MOD_INFO",
+    "id": "random_enchant",
+    "name": "追加 - ランダムエンチャント",
+    "authors": [ "LISPCOC" ],
+    "maintainers": [ "LISPCOC" ],
+    "description": "モンスターを倒したときにランダムで武器をエンチャントするアイテムを落とすようになります。",
+    "category": "content",
+    "dependencies": [ "dda" ]
+  },
+  {
+    "id": "random_enchant_ALREADY_ENCHANT",
+    "type": "json_flag"
+  }
+]

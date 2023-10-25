@@ -1,0 +1,47 @@
+[
+  {
+    "id": "random_enchant_ZOMBIE_KILLER_1",
+    "type": "json_flag",
+    "info": "<good>ゾンビ特攻</good>"
+  },
+  {
+    "id": "random_enchant_ZOMBIE_KILLER_2",
+    "type": "json_flag",
+    "info": "<good>ゾンビ特攻</good>"
+  },
+  {
+    "id": "random_enchant_ZOMBIE_KILLER_3",
+    "type": "json_flag",
+    "info": "<good>ゾンビ特攻</good>"
+  },
+  {
+    "id": "random_enchant_FLIGHT_KILLER_1",
+    "type": "json_flag",
+    "info": "<good>飛行特攻</good>"
+  },
+  {
+    "id": "random_enchant_FLIGHT_KILLER_2",
+    "type": "json_flag",
+    "info": "<good>飛行特攻</good>"
+  },
+  {
+    "id": "random_enchant_FLIGHT_KILLER_3",
+    "type": "json_flag",
+    "info": "<good>飛行特攻</good>"
+  },
+  {
+    "id": "random_enchant_STOP_TIME_1",
+    "type": "json_flag",
+    "info": "<good>時間停止</good>"
+  },
+  {
+    "id": "random_enchant_STOP_TIME_2",
+    "type": "json_flag",
+    "info": "<good>時間停止</good>"
+  },
+  {
+    "id": "random_enchant_STOP_TIME_3",
+    "type": "json_flag",
+    "info": "<good>時間停止</good>"
+  }
+]

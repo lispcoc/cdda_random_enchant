@@ -1,0 +1,31 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_event_kills_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "effect": [
+      { "math": [ "_difficulty", "=", "u_val('exp') - u_random_enchant_current_exp" ] },
+      { "math": [ "u_random_enchant_current_exp", "=", "u_val('exp')" ] },
+      { "run_eoc_with": "EOC_random_enchant_spawn", "variables": { "difficulty": { "context_val": "difficulty" } } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_spawn",
+    "effect": [
+      {
+        "switch": { "math": [ "_difficulty" ] },
+        "cases": [
+          { "case": 0, "effect": { "math": [ "_rank", "=", "1" ] } },
+          { "case": 10, "effect": { "math": [ "_rank", "=", "2" ] } },
+          { "case": 20, "effect": { "math": [ "_rank", "=", "3" ] } }
+        ]
+      },
+      {
+        "run_eoc_with": "EOC_random_enchant_lottery_main",
+        "variables": { "rank": { "context_val": "rank" }, "group": "zombie" }
+      }
+    ]
+  }
+]
