@@ -36,13 +36,9 @@ list.forEach( e => {
 })
 
 var info1 = json.map( e => {
-    return { "if": { "npc_has_flag": e.id }, "then": [ {"math": ["_" + e.id, "=", "1"]} ] }
-})
-
-var info2 = json.map( e => {
-    return { "if": {"math": ["_" + e.id, "==", "1"]}, "then": [ {"npc_set_flag": e.id } ] }
+    return { "if": { "u_has_flag": e.id }, "then": {"npc_set_flag": e.id } }
 })
 
 fs.writeFileSync("flags.json", JSON.stringify(json, null, "  "))
 fs.writeFileSync("lottery/lottery_flags.json", JSON.stringify(eocs, null, "  "))
-fs.writeFileSync("tmp.json", JSON.stringify([info1, info2], null, "  "))
+fs.writeFileSync("tmp.json", JSON.stringify(info1, null, "  "))
