@@ -1,0 +1,37 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_character_[DRAIN_MANA]",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
+    "effect": { "run_eocs": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster_[DRAIN_MANA]",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
+    "effect": { "run_eocs": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]",
+    "effect": [
+      {
+        "if": {
+          "u_has_wielded_with_flag": "DRAIN_MANA_3",
+          "then": { "math": [ "u_val('mana')", "+=", "20" ] },
+          "else": {
+            "if": {
+              "u_has_wielded_with_flag": "DRAIN_MANA_2",
+              "then": { "math": [ "u_val('mana')", "+=", "12" ] },
+              "else": { "if": { "u_has_wielded_with_flag": "DRAIN_MANA_1", "then": { "math": [ "u_val('mana')", "+=", "5" ] } } }
+            }
+          }
+        }
+      }
+    ]
+  }
+]

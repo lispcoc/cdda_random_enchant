@@ -1,0 +1,67 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_1]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "u_has_wielded_with_flag": "ZOMBIE_KILLER_1" },
+    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_1", "duration": "PERMANENT" },
+    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_1" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_2]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "u_has_wielded_with_flag": "ZOMBIE_KILLER_2" },
+    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_2", "duration": "PERMANENT" },
+    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_2" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_3]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "u_has_wielded_with_flag": "ZOMBIE_KILLER_3" },
+    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_3", "duration": "PERMANENT" },
+    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_3" }
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_ZOMBIE_KILLER_1",
+    "name": [ "ZOMBIE_KILLER_1" ],
+    "desc": [ "ZOMBIE_KILLER_1" ],
+    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 1 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_ZOMBIE_KILLER_2",
+    "name": [ "ZOMBIE_KILLER_2" ],
+    "desc": [ "ZOMBIE_KILLER_2" ],
+    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 2 } ] } ]
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_ZOMBIE_KILLER_3",
+    "name": [ "ZOMBIE_KILLER_3" ],
+    "desc": [ "ZOMBIE_KILLER_3" ],
+    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 3 } ] } ]
+  },
+  {
+    "id": "random_enchant_ZOMBIE_KILLER",
+    "type": "SPELL",
+    "name": "random_enchant_ZOMBIE_KILLER",
+    "description": "random_enchant_ZOMBIE_KILLER",
+    "valid_targets": [ "hostile" ],
+    "targeted_monster_species": [ "ZOMBIE" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "max_level": 10,
+    "base_casting_time": 0,
+    "min_range": 1,
+    "min_damage": 5,
+    "max_damage": 20,
+    "damage_increment": 5
+  }
+]

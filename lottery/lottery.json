@@ -23,20 +23,33 @@
               ]
             },
             {
-              "if": { "compare_string": [ "zombie", { "context_val": "group" } ] },
-              "then": [
-                {
-                  "weighted_list_eocs": [
-                    [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 20 } ],
-                    [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 10 } ]
-                  ]
-                }
+              "weighted_list_eocs": [
+                [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 20 } ],
+                [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 10 } ],
+                [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 10 } ],
+                [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
+                [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 10 } ]
               ]
+            },
+            {
+              "if": { "compare_string": [ "zombie", { "context_val": "group" } ] },
+              "then": {
+                "weighted_list_eocs": [
+                  [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 10 } ],
+                  [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 10 } ],
+                  [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
+                  [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 10 } ]
+                ]
+              }
             },
             { "math": [ "_current", "+=", "1" ] }
           ]
         },
         "condition": { "math": [ "random_enchant_current", "<=", "3" ] }
+      },
+      {
+        "u_message": "<global_val:random_enchant_f_1> <global_val:random_enchant_f_2> <global_val:random_enchant_f_3>"
       }
     ]
   }

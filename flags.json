@@ -2,46 +2,76 @@
   {
     "id": "random_enchant_ZOMBIE_KILLER_1",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻</good>"
+    "info": "<good>ゾンビ特攻Lv:1</good>"
   },
   {
     "id": "random_enchant_ZOMBIE_KILLER_2",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻</good>"
+    "info": "<good>ゾンビ特攻Lv:2</good>"
   },
   {
     "id": "random_enchant_ZOMBIE_KILLER_3",
     "type": "json_flag",
-    "info": "<good>ゾンビ特攻</good>"
+    "info": "<good>ゾンビ特攻Lv:3</good>"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_1",
     "type": "json_flag",
-    "info": "<good>飛行特攻</good>"
+    "info": "<good>飛行特攻Lv:1</good>"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_2",
     "type": "json_flag",
-    "info": "<good>飛行特攻</good>"
+    "info": "<good>飛行特攻Lv:2</good>"
   },
   {
     "id": "random_enchant_FLIGHT_KILLER_3",
     "type": "json_flag",
-    "info": "<good>飛行特攻</good>"
+    "info": "<good>飛行特攻Lv:3</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_HP_1",
+    "type": "json_flag",
+    "info": "<good>HP回復Lv:1</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_HP_2",
+    "type": "json_flag",
+    "info": "<good>HP回復Lv:2</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_HP_3",
+    "type": "json_flag",
+    "info": "<good>HP回復Lv:3</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_MANA_1",
+    "type": "json_flag",
+    "info": "<good>マナ回復Lv:1</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_MANA_2",
+    "type": "json_flag",
+    "info": "<good>マナ回復Lv:2</good>"
+  },
+  {
+    "id": "random_enchant_DRAIN_MANA_3",
+    "type": "json_flag",
+    "info": "<good>マナ回復Lv:3</good>"
   },
   {
     "id": "random_enchant_STOP_TIME_1",
     "type": "json_flag",
-    "info": "<good>時間停止</good>"
+    "info": "<good>時間停止Lv:1</good>"
   },
   {
     "id": "random_enchant_STOP_TIME_2",
     "type": "json_flag",
-    "info": "<good>時間停止</good>"
+    "info": "<good>時間停止Lv:2</good>"
   },
   {
     "id": "random_enchant_STOP_TIME_3",
     "type": "json_flag",
-    "info": "<good>時間停止</good>"
+    "info": "<good>時間停止Lv:3</good>"
   }
 ]
