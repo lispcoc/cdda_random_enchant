@@ -1,0 +1,158 @@
+[
+  {
+    "id": "enchant_crystal",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": { "str": "エンチャント・クリスタル" },
+    "description": "武器に特殊な力を付与することのできる結晶です。一度使用すると力を失います。",
+    "weight": "5 g",
+    "volume": "250 ml",
+    "price": 1500,
+    "symbol": "=",
+    "color": "yellow",
+    "looks_like": "battery",
+    "use_action": {
+      "type": "effect_on_conditions",
+      "description": "Seems like a targeted spatial distortion.",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_random_enchant_enchant_crystal",
+          "effect": [
+            {
+              "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_1" },
+              "then": [ { "math": [ "_random_enchant_ZOMBIE_KILLER_1", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_2" },
+              "then": [ { "math": [ "_random_enchant_ZOMBIE_KILLER_2", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_3" },
+              "then": [ { "math": [ "_random_enchant_ZOMBIE_KILLER_3", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_1" },
+              "then": [ { "math": [ "_random_enchant_FLIGHT_KILLER_1", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_2" },
+              "then": [ { "math": [ "_random_enchant_FLIGHT_KILLER_2", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_FLIGHT_KILLER_3" },
+              "then": [ { "math": [ "_random_enchant_FLIGHT_KILLER_3", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_HP_1" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_HP_1", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_HP_2" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_HP_2", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_HP_3" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_HP_3", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_1" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_MANA_1", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_2" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_MANA_2", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_DRAIN_MANA_3" },
+              "then": [ { "math": [ "_random_enchant_DRAIN_MANA_3", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_STOP_TIME_1" },
+              "then": [ { "math": [ "_random_enchant_STOP_TIME_1", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_STOP_TIME_2" },
+              "then": [ { "math": [ "_random_enchant_STOP_TIME_2", "=", "1" ] } ]
+            },
+            {
+              "if": { "npc_has_flag": "random_enchant_STOP_TIME_3" },
+              "then": [ { "math": [ "_random_enchant_STOP_TIME_3", "=", "1" ] } ]
+            },
+            {
+              "u_run_inv_eocs": "manual",
+              "title": "対象は？",
+              "true_eocs": [
+                {
+                  "id": "EOC_random_enchant_enchant_crystal_run",
+                  "effect": [
+                    { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" },
+                    {
+                      "if": { "math": [ "_random_enchant_ZOMBIE_KILLER_1", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_ZOMBIE_KILLER_2", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_ZOMBIE_KILLER_3", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_FLIGHT_KILLER_1", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_FLIGHT_KILLER_2", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_FLIGHT_KILLER_3", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_HP_1", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_1" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_HP_2", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_2" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_HP_3", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_HP_3" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_MANA_1", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_1" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_MANA_2", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_2" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_DRAIN_MANA_3", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_3" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_STOP_TIME_1", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_1" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_STOP_TIME_2", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_2" } ]
+                    },
+                    {
+                      "if": { "math": [ "_random_enchant_STOP_TIME_3", "==", "1" ] },
+                      "then": [ { "npc_set_flag": "random_enchant_STOP_TIME_3" } ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
