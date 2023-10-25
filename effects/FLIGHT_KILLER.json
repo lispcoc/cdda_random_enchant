@@ -57,15 +57,15 @@
     "id": "EOC_random_enchant_FLIGHT_KILLER",
     "condition": { "u_has_flag": "FLIES" },
     "effect": {
-      "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_3" },
+      "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_3" },
       "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 3, "max_level": 3 } },
       "else": [
         {
-          "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_2" },
+          "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_2" },
           "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 2, "max_level": 2 } },
           "else": [
             {
-              "if": { "npc_has_wielded_with_flag": "FLIGHT_KILLER_1" },
+              "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_1" },
               "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 1, "max_level": 1 } }
             }
           ]

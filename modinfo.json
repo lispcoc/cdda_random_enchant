@@ -10,7 +10,11 @@
     "dependencies": [ "dda" ]
   },
   {
-    "id": "random_enchant_ALREADY_ENCHANT",
-    "type": "json_flag"
+    "type": "json_flag",
+    "id": "random_enchant_ALREADY_ENCHANT"
+  },
+  {
+    "type": "json_flag",
+    "id": "random_enchant_USED"
   }
 ]

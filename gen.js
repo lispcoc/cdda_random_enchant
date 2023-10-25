@@ -39,19 +39,19 @@ var eff1 = json.map( e => {
     return { "if": { "npc_has_flag": e.id }, "then": [{"math": ["u_" + e.id, "=", "1"] }], "else": [{"math": ["u_" + e.id, "=", "0"] }] }
 })
 var eff2 = json.map( e => {
-    return { "if": {"math": ["u_" + e.id, "==", "1"] }, "then": [{"npc_set_flag":  e.id }, { "u_message": e.id }] }
+    return { "if": {"math": ["u_" + e.id, "==", "1"] }, "then": [{"npc_set_flag":  e.id }] }
 })
 
-json.push({
+eocs.push({
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_set_flag_before",
     "effect": eff1
 })
-json.push({
+eocs.push({
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_set_flag_after",
     "effect": eff2
 })
 
 fs.writeFileSync("flags.json", JSON.stringify(json, null, "  "))
-fs.writeFileSync("lottery/lottery_flags.json", JSON.stringify(eocs, null, "  "))
+fs.writeFileSync("flags_eoc.json", JSON.stringify(eocs, null, "  "))

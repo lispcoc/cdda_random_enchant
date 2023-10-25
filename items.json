@@ -4,6 +4,7 @@
     "type": "TOOL",
     "category": "spare_parts",
     "name": { "str": "エンチャント・クリスタル" },
+    "conditional_names": [ { "type": "FLAG", "condition": "random_enchant_USED", "name": { "str_sp": "%s(使用済)" } } ],
     "description": "武器に特殊な力を付与することのできる結晶です。一度使用すると力を失います。",
     "weight": "5 g",
     "volume": "250 ml",
@@ -17,8 +18,10 @@
       "effect_on_conditions": [
         {
           "id": "EOC_random_enchant_enchant_crystal",
+          "condition": { "not": { "npc_has_flag": "random_enchant_USED" } },
           "effect": [
             { "run_eocs": "EOC_random_enchant_set_flag_before" },
+            { "math": [ "u_random_enchant_set_flag_success", "=", "0" ] },
             {
               "u_run_inv_eocs": "manual",
               "title": "対象は？",
@@ -26,11 +29,21 @@
                 {
                   "id": "EOC_random_enchant_enchant_crystal_run",
                   "condition": { "not": { "npc_has_flag": "random_enchant_ALREADY_ENCHANT" } },
-                  "effect": [ { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" }, { "run_eocs": "EOC_random_enchant_set_flag_after" } ]
+                  "effect": [
+                    { "math": [ "u_random_enchant_set_flag_success", "=", "1" ] },
+                    { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" },
+                    { "run_eocs": "EOC_random_enchant_set_flag_after" }
+                  ],
+                  "false_effect": { "u_message": "すでにエンチャントされている。" }
                 }
               ]
+            },
+            {
+              "if": { "math": [ "u_random_enchant_set_flag_success", "==", "1" ] },
+              "then": { "npc_set_flag": "random_enchant_USED" }
             }
-          ]
+          ],
+          "false_effect": { "u_message": "使用済です。" }
         }
       ]
     }
