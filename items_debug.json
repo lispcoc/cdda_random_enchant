@@ -1,0 +1,72 @@
+[
+  {
+    "id": "enchant_crystal_debug_[ZOMBIE_KILLER]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(ゾンビ特攻)" },
+    "flags": [ "random_enchant_ZOMBIE_KILLER_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[PLANT_KILLER]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(植物特攻)" },
+    "flags": [ "random_enchant_PLANT_KILLER_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[INSECT_KILLER]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(虫特攻)" },
+    "flags": [ "random_enchant_INSECT_KILLER_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[FLIGHT_KILLER]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(飛行特攻)" },
+    "flags": [ "random_enchant_FLIGHT_KILLER_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[BLEED]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(出血)" },
+    "flags": [ "random_enchant_BLEED_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[DRAIN_HP]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(HP回復)" },
+    "flags": [ "random_enchant_DRAIN_HP_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[DRAIN_MANA]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(マナ回復)" },
+    "flags": [ "random_enchant_DRAIN_MANA_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[DRAIN_STAMINA]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(スタミナ回復)" },
+    "flags": [ "random_enchant_DRAIN_STAMINA_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[STOP_TIME]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(時間停止)" },
+    "flags": [ "random_enchant_STOP_TIME_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[DEBUG_DEATH]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(即死(デバッグ))" },
+    "flags": [ "random_enchant_DEBUG_DEATH_3" ]
+  }
+]

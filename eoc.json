@@ -18,6 +18,7 @@
     "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
     "effect": {
       "run_eocs": [
+        "EOC_random_enchant_melee_attacks_character_[BLEED]",
         "EOC_random_enchant_melee_attacks_character_[DEBUG_DEATH]",
         "EOC_random_enchant_melee_attacks_character_[DRAIN_HP]",
         "EOC_random_enchant_melee_attacks_character_[DRAIN_MANA]",
@@ -38,6 +39,7 @@
     "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
     "effect": {
       "run_eocs": [
+        "EOC_random_enchant_melee_attacks_monster_[BLEED]",
         "EOC_random_enchant_melee_attacks_monster_[DEBUG_DEATH]",
         "EOC_random_enchant_melee_attacks_monster_[DRAIN_HP]",
         "EOC_random_enchant_melee_attacks_monster_[DRAIN_MANA]",
@@ -57,6 +59,7 @@
     "required_event": "character_ranged_attacks_character",
     "effect": {
       "run_eocs": [
+        "EOC_random_enchant_ranged_attacks_character_[BLEED]",
         "EOC_random_enchant_ranged_attacks_character_[DEBUG_DEATH]",
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_HP]",
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_MANA]",
@@ -76,6 +79,7 @@
     "required_event": "character_ranged_attacks_monster",
     "effect": {
       "run_eocs": [
+        "EOC_random_enchant_ranged_attacks_monster_[BLEED]",
         "EOC_random_enchant_ranged_attacks_monster_[DEBUG_DEATH]",
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_HP]",
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_MANA]",

@@ -60,6 +60,21 @@
     "info": "[<good>飛行特攻Lv:3</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
   },
   {
+    "id": "random_enchant_BLEED_1",
+    "type": "json_flag",
+    "info": "[<good>出血Lv:1</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+  },
+  {
+    "id": "random_enchant_BLEED_2",
+    "type": "json_flag",
+    "info": "[<good>出血Lv:2</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+  },
+  {
+    "id": "random_enchant_BLEED_3",
+    "type": "json_flag",
+    "info": "[<good>出血Lv:3</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+  },
+  {
     "id": "random_enchant_DRAIN_HP_1",
     "type": "json_flag",
     "info": "[<good>HP回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"

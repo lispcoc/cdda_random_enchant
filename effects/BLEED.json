@@ -1,0 +1,37 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_character_[BLEED]",
+    "effect": { "run_eocs": "EOC_random_enchant_[BLEED]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster_[BLEED]",
+    "effect": { "run_eocs": "EOC_random_enchant_[BLEED]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[BLEED]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[BLEED]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[BLEED]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[BLEED]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[BLEED]",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_3" },
+        "then": { "npc_add_effect": "bleed", "duration": 120 },
+        "else": {
+          "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_2" },
+          "then": { "npc_add_effect": "bleed", "duration": 90 },
+          "else": { "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_1" }, "then": { "npc_add_effect": "bleed", "duration": 60 } }
+        }
+      }
+    ]
+  }
+]

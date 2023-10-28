@@ -5,13 +5,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[ZOMBIE_KILLER]"
+    "id": "EOC_random_enchant_lottery[ZOMBIE_KILLER]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_1" },
+          { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_2" },
+          { "npc_has_flag": "random_enchant_ZOMBIE_KILLER_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -19,13 +28,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_PLANT_KILLER_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_PLANT_KILLER_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_PLANT_KILLER_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[PLANT_KILLER]"
+    "id": "EOC_random_enchant_lottery[PLANT_KILLER]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_PLANT_KILLER_1" },
+          { "npc_has_flag": "random_enchant_PLANT_KILLER_2" },
+          { "npc_has_flag": "random_enchant_PLANT_KILLER_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -33,13 +51,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_INSECT_KILLER_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_INSECT_KILLER_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_INSECT_KILLER_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[INSECT_KILLER]"
+    "id": "EOC_random_enchant_lottery[INSECT_KILLER]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_INSECT_KILLER_1" },
+          { "npc_has_flag": "random_enchant_INSECT_KILLER_2" },
+          { "npc_has_flag": "random_enchant_INSECT_KILLER_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -47,13 +74,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[FLIGHT_KILLER]"
+    "id": "EOC_random_enchant_lottery[FLIGHT_KILLER]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_FLIGHT_KILLER_1" },
+          { "npc_has_flag": "random_enchant_FLIGHT_KILLER_2" },
+          { "npc_has_flag": "random_enchant_FLIGHT_KILLER_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -61,13 +97,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_BLEED_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_BLEED_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_BLEED_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[DRAIN_HP]"
+    "id": "EOC_random_enchant_lottery[BLEED]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_BLEED_1" },
+          { "npc_has_flag": "random_enchant_BLEED_2" },
+          { "npc_has_flag": "random_enchant_BLEED_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -75,13 +120,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_HP_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_HP_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_HP_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[DRAIN_MANA]"
+    "id": "EOC_random_enchant_lottery[DRAIN_HP]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_DRAIN_HP_1" },
+          { "npc_has_flag": "random_enchant_DRAIN_HP_2" },
+          { "npc_has_flag": "random_enchant_DRAIN_HP_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -89,13 +143,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_MANA_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[DRAIN_STAMINA]"
+    "id": "EOC_random_enchant_lottery[DRAIN_MANA]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_DRAIN_MANA_1" },
+          { "npc_has_flag": "random_enchant_DRAIN_MANA_2" },
+          { "npc_has_flag": "random_enchant_DRAIN_MANA_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -103,13 +166,22 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_STAMINA_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_STAMINA_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_DRAIN_STAMINA_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[STOP_TIME]"
+    "id": "EOC_random_enchant_lottery[DRAIN_STAMINA]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_DRAIN_STAMINA_1" },
+          { "npc_has_flag": "random_enchant_DRAIN_STAMINA_2" },
+          { "npc_has_flag": "random_enchant_DRAIN_STAMINA_3" }
+        ]
+      }
+    }
   },
   {
     "type": "effect_on_condition",
@@ -117,12 +189,44 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_1" } },
-          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_2" } },
-          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_3" } }
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_3" } ] }
         ]
       }
     ],
-    "id": "EOC_random_enchant_lottery[DEBUG_DEATH]"
+    "id": "EOC_random_enchant_lottery[STOP_TIME]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_STOP_TIME_1" },
+          { "npc_has_flag": "random_enchant_STOP_TIME_2" },
+          { "npc_has_flag": "random_enchant_STOP_TIME_3" }
+        ]
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_3" } ] }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[DEBUG_DEATH]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_DEBUG_DEATH_1" },
+          { "npc_has_flag": "random_enchant_DEBUG_DEATH_2" },
+          { "npc_has_flag": "random_enchant_DEBUG_DEATH_3" }
+        ]
+      }
+    }
   }
 ]
