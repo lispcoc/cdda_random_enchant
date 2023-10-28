@@ -30,7 +30,7 @@ list.forEach( e => {
         j.info = "[<good>" + e.name + "Lv:" + i + "</good>]" + e.info
         json.push(j)
         eoc.effect[0].cases.push(
-            { "case": i, "effect": { "set_string_var": j.id, "target_var": { "var_val": "target" } } }
+            { "case": i, "effect": { "npc_set_flag": j.id } }
         )
     }
     eocs.push(eoc)

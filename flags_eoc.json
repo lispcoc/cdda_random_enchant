@@ -5,15 +5,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_ZOMBIE_KILLER_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_ZOMBIE_KILLER_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_ZOMBIE_KILLER_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_ZOMBIE_KILLER_3" } }
         ]
       }
     ],
@@ -25,15 +19,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_FLIGHT_KILLER_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_FLIGHT_KILLER_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_FLIGHT_KILLER_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" } }
         ]
       }
     ],
@@ -45,15 +33,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_DRAIN_HP_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_DRAIN_HP_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_DRAIN_HP_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_HP_3" } }
         ]
       }
     ],
@@ -65,15 +47,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_DRAIN_MANA_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_DRAIN_MANA_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_DRAIN_MANA_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_MANA_3" } }
         ]
       }
     ],
@@ -85,15 +61,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_STOP_TIME_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_STOP_TIME_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_STOP_TIME_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_3" } }
         ]
       }
     ],
@@ -105,15 +75,9 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
-          { "case": 1, "effect": { "set_string_var": "random_enchant_DEBUG_DEATH_1", "target_var": { "var_val": "target" } } },
-          {
-            "case": 2,
-            "effect": { "set_string_var": "random_enchant_DEBUG_DEATH_2", "target_var": { "var_val": "target" } }
-          },
-          {
-            "case": 3,
-            "effect": { "set_string_var": "random_enchant_DEBUG_DEATH_3", "target_var": { "var_val": "target" } }
-          }
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DEBUG_DEATH_3" } }
         ]
       }
     ],
