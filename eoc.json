@@ -38,9 +38,9 @@
             "condition": { "not": { "npc_has_flag": "random_enchant_ALREADY_ENCHANT" } },
             "effect": [
               { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" },
-              { "npc_set_flag": { "global_val": "random_enchant_f_1" } },
-              { "npc_set_flag": { "global_val": "random_enchant_f_2" } },
-              { "npc_set_flag": { "global_val": "random_enchant_f_3" } }
+              { "npc_set_flag": { "u_val": "random_enchant_f_1" } },
+              { "npc_set_flag": { "u_val": "random_enchant_f_2" } },
+              { "npc_set_flag": { "u_val": "random_enchant_f_3" } }
             ]
           }
         ]
