@@ -73,5 +73,20 @@
     "id": "random_enchant_STOP_TIME_3",
     "type": "json_flag",
     "info": "[<good>時間停止Lv:3</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
+  },
+  {
+    "id": "random_enchant_DEBUG_DEATH_1",
+    "type": "json_flag",
+    "info": "[<good>即死(デバッグ)Lv:1</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
+  },
+  {
+    "id": "random_enchant_DEBUG_DEATH_2",
+    "type": "json_flag",
+    "info": "[<good>即死(デバッグ)Lv:2</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
+  },
+  {
+    "id": "random_enchant_DEBUG_DEATH_3",
+    "type": "json_flag",
+    "info": "[<good>即死(デバッグ)Lv:3</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
   }
 ]

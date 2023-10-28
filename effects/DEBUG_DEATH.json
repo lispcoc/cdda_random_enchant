@@ -1,0 +1,40 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_character_[DEBUG_DEATH]",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+    "condition": {
+      "and": [
+        { "math": [ "_hits", "==", "1" ] },
+        {
+          "or": [
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_1" },
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_2" },
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_3" }
+          ]
+        }
+      ]
+    },
+    "effect": { "math": [ "n_hp()", "=", "1" ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster_[DEBUG_DEATH]",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": {
+      "and": [
+        { "math": [ "_hits", "==", "1" ] },
+        {
+          "or": [
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_1" },
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_2" },
+            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_3" }
+          ]
+        }
+      ]
+    },
+    "effect": { "math": [ "n_hp()", "=", "1" ] }
+  }
+]

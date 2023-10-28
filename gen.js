@@ -6,6 +6,7 @@ var list = [
     {"id": "DRAIN_HP", "name": "HP回復", "info": "このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"},
     {"id": "DRAIN_MANA", "name": "マナ回復", "info": "このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"},
     {"id": "STOP_TIME", "name": "時間停止", "info": "このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"},
+    {"id": "DEBUG_DEATH", "name": "即死(デバッグ)", "info": "このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"},
 ]
 
 var json = []
@@ -42,11 +43,11 @@ var eff2 = json.map( e => {
     return { "if": {"math": ["u_" + e.id, "==", "1"] }, "then": [{"npc_set_flag":  e.id }] }
 })
 
-eocs.push({
-    "type": "effect_on_condition",
-    "id": "EOC_random_enchant_set_flag_before",
-    "effect": eff1
-})
+//eocs.push({
+//    "type": "effect_on_condition",
+//    "id": "EOC_random_enchant_set_flag_before",
+//    "effect": eff1
+//})
 //eocs.push({
 //    "type": "effect_on_condition",
 //    "id": "EOC_random_enchant_set_flag_after",
