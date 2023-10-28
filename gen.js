@@ -55,4 +55,4 @@ var eff2 = json.map( e => {
 //})
 
 fs.writeFileSync("flags.json", JSON.stringify(json, null, "  "))
-fs.writeFileSync("flags_eoc.json", JSON.stringify(eocs, null, "  "))
+fs.writeFileSync("lottery/flags_eoc.json", JSON.stringify(eocs, null, "  "))
