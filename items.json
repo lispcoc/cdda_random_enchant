@@ -47,5 +47,65 @@
         }
       ]
     }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_before",
+    "effect": [
+      { "set_string_var": "null", "target_var": { "u_val": "random_enchant_f_1" } },
+      { "set_string_var": "null", "target_var": { "u_val": "random_enchant_f_2" } },
+      { "set_string_var": "null", "target_var": { "u_val": "random_enchant_f_3" } },
+      {
+        "foreach": "array",
+        "var": { "context_val": "tmp" },
+        "target": [ "_f_1", "_f_2", "_f_3" ],
+        "effect": [
+          { "math": [ "_found", "=", "0" ] },
+          {
+            "foreach": "ids",
+            "var": { "context_val": "id" },
+            "target": "flag",
+            "effect": [
+              {
+                "if": {
+                  "and": [
+                    { "math": [ "_found", "==", "0" ] },
+                    { "npc_has_flag": { "context_val": "id" } },
+                    { "not": { "compare_string": [ { "context_val": "f_1" }, { "context_val": "id" } ] } },
+                    { "not": { "compare_string": [ { "context_val": "f_2" }, { "context_val": "id" } ] } },
+                    { "not": { "compare_string": [ { "context_val": "f_3" }, { "context_val": "id" } ] } }
+                  ]
+                },
+                "then": [
+                  { "math": [ "_found", "=", "1" ] },
+                  { "set_string_var": { "context_val": "id" }, "target_var": { "var_val": "tmp" } }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      { "set_string_var": { "context_val": "f_1" }, "target_var": { "u_val": "random_enchant_f_1" } },
+      { "set_string_var": { "context_val": "f_2" }, "target_var": { "u_val": "random_enchant_f_2" } },
+      { "set_string_var": { "context_val": "f_3" }, "target_var": { "u_val": "random_enchant_f_3" } }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_set_flag_after",
+    "effect": [
+      {
+        "if": { "not": { "compare_string": [ { "u_val": "random_enchant_f_1" }, "null" ] } },
+        "then": [ { "npc_set_flag": { "u_val": "random_enchant_f_1" } } ]
+      },
+      {
+        "if": { "not": { "compare_string": [ { "u_val": "random_enchant_f_2" }, "null" ] } },
+        "then": [ { "npc_set_flag": { "u_val": "random_enchant_f_2" } } ]
+      },
+      {
+        "if": { "not": { "compare_string": [ { "u_val": "random_enchant_f_3" }, "null" ] } },
+        "then": [ { "npc_set_flag": { "u_val": "random_enchant_f_3" } } ]
+      }
+    ]
   }
 ]

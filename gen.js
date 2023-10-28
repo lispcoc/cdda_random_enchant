@@ -47,11 +47,11 @@ eocs.push({
     "id": "EOC_random_enchant_set_flag_before",
     "effect": eff1
 })
-eocs.push({
-    "type": "effect_on_condition",
-    "id": "EOC_random_enchant_set_flag_after",
-    "effect": eff2
-})
+//eocs.push({
+//    "type": "effect_on_condition",
+//    "id": "EOC_random_enchant_set_flag_after",
+//    "effect": eff2
+//})
 
 fs.writeFileSync("flags.json", JSON.stringify(json, null, "  "))
 fs.writeFileSync("flags_eoc.json", JSON.stringify(eocs, null, "  "))
