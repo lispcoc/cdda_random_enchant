@@ -4,37 +4,64 @@
     "id": "EOC_random_enchant_melee_attacks_character_[DEBUG_DEATH]",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_character",
-    "condition": {
-      "and": [
-        { "math": [ "_hits", "==", "1" ] },
-        {
-          "or": [
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_1" },
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_2" },
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_3" }
-          ]
-        }
-      ]
-    },
-    "effect": { "math": [ "n_hp()", "=", "1" ] }
+    "condition": { "math": [ "_hits", "==", "1" ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[DEBUG_DEATH]",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_monster",
+    "condition": { "math": [ "_hits", "==", "1" ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[DEBUG_DEATH]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[DEBUG_DEATH]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[DEBUG_DEATH]",
     "condition": {
-      "and": [
-        { "math": [ "_hits", "==", "1" ] },
-        {
-          "or": [
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_1" },
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_2" },
-            { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_3" }
-          ]
-        }
+      "or": [
+        { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_1" },
+        { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_2" },
+        { "u_has_wielded_with_flag": "random_enchant_DEBUG_DEATH_3" }
       ]
     },
-    "effect": { "math": [ "n_hp()", "=", "1" ] }
+    "effect": [
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "u_cast_spell": { "id": "random_enchant_DEBUG_DEATH", "min_level": 1, "max_level": 3 },
+        "loc": { "context_val": "loc" }
+      }
+    ]
+  },
+  {
+    "id": "random_enchant_DEBUG_DEATH",
+    "type": "SPELL",
+    "name": "random_enchant_DEBUG_DEATH",
+    "description": "random_enchant_DEBUG_DEATH",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "max_level": 10,
+    "base_casting_time": 0,
+    "min_range": 1,
+    "min_damage": 9999,
+    "max_damage": 9999,
+    "damage_increment": 5
   }
 ]

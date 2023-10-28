@@ -5,7 +5,7 @@
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_character",
     "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
-    "effect": { "run_eocs": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]" }
+    "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_MANA]" }
   },
   {
     "type": "effect_on_condition",
@@ -13,11 +13,27 @@
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_monster",
     "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
-    "effect": { "run_eocs": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]" }
+    "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_MANA]" }
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_melee_attacks_[DRAIN_MANA]",
+    "id": "EOC_random_enchant_ranged_attacks_character_[DRAIN_MANA]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "condition": { "one_in_chance": 10 },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_MANA]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[DRAIN_MANA]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "condition": { "one_in_chance": 10 },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_MANA]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[DRAIN_MANA]",
     "effect": [
       {
         "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_MANA_3" },

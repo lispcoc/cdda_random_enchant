@@ -1,76 +1,83 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_wields_item_[FLIGHT_KILLER]",
+    "id": "EOC_random_enchant_melee_attacks_character_[FLIGHT_KILLER]",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": {
-      "or": [
-        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_1" },
-        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_2" },
-        { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_3" }
-      ]
-    },
-    "effect": { "u_add_effect": "random_enchant_FLIGHT_KILLER", "duration": "PERMANENT" },
-    "false_effect": { "u_lose_effect": "random_enchant_FLIGHT_KILLER" }
+    "required_event": "character_melee_attacks_character",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_flag": "FLIES" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[FLIGHT_KILLER]" } ]
   },
   {
-    "type": "effect_type",
-    "id": "random_enchant_FLIGHT_KILLER",
-    "name": [ "FLIGHT_KILLER" ],
-    "desc": [ "FLIGHT_KILLER" ],
-    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_FLIGHT_KILLER_emit" } ] } ]
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster_[FLIGHT_KILLER]",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_flag": "FLIES" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[FLIGHT_KILLER]" } ]
   },
   {
-    "id": "random_enchant_FLIGHT_KILLER_emit",
-    "type": "SPELL",
-    "name": "random_enchant_FLIGHT_KILLER_emit",
-    "description": "random_enchant_FLIGHT_KILLER_emit",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
-    "effect": "effect_on_condition",
-    "effect_str": "EOC_random_enchant_FLIGHT_KILLER",
-    "shape": "blast",
-    "max_level": 10,
-    "base_casting_time": 0,
-    "min_range": 1
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[FLIGHT_KILLER]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "condition": { "and": [ { "npc_has_flag": "FLIES" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[FLIGHT_KILLER]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[FLIGHT_KILLER]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "condition": { "and": [ { "npc_has_flag": "FLIES" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[FLIGHT_KILLER]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[FLIGHT_KILLER]",
+    "effect": [
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_3" },
+        "then": {
+          "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 3, "max_level": 3 },
+          "loc": { "context_val": "loc" }
+        },
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_2" },
+            "then": {
+              "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 2, "max_level": 2 },
+              "loc": { "context_val": "loc" }
+            },
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_1" },
+                "then": {
+                  "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 1, "max_level": 1 },
+                  "loc": { "context_val": "loc" }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "random_enchant_FLIGHT_KILLER",
     "type": "SPELL",
     "name": "random_enchant_FLIGHT_KILLER",
     "description": "random_enchant_FLIGHT_KILLER",
-    "valid_targets": [ "self" ],
+    "valid_targets": [ "hostile" ],
     "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "pure",
     "max_level": 10,
     "base_casting_time": 0,
-    "min_range": 1,
+    "min_range": 120,
     "min_damage": 0,
     "max_damage": 20,
     "damage_increment": 5
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_random_enchant_FLIGHT_KILLER",
-    "condition": { "u_has_flag": "FLIES" },
-    "effect": {
-      "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_3" },
-      "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 3, "max_level": 3 } },
-      "else": [
-        {
-          "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_2" },
-          "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 2, "max_level": 2 } },
-          "else": [
-            {
-              "if": { "npc_has_wielded_with_flag": "random_enchant_FLIGHT_KILLER_1" },
-              "then": { "u_cast_spell": { "id": "random_enchant_FLIGHT_KILLER", "min_level": 1, "max_level": 1 } }
-            }
-          ]
-        }
-      ]
-    }
   }
 ]

@@ -1,51 +1,67 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_1]",
+    "id": "EOC_random_enchant_melee_attacks_character_[ZOMBIE_KILLER]",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_1" },
-    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_1", "duration": "PERMANENT" },
-    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_1" }
+    "required_event": "character_melee_attacks_character",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "ZOMBIE" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_2]",
+    "id": "EOC_random_enchant_melee_attacks_monster_[ZOMBIE_KILLER]",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_2" },
-    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_2", "duration": "PERMANENT" },
-    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_2" }
+    "required_event": "character_melee_attacks_monster",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "ZOMBIE" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_wields_item_[ZOMBIE_KILLER_3]",
+    "id": "EOC_random_enchant_ranged_attacks_character_[ZOMBIE_KILLER]",
     "eoc_type": "EVENT",
-    "required_event": "character_wields_item",
-    "condition": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_3" },
-    "effect": { "u_add_effect": "random_enchant_ZOMBIE_KILLER_3", "duration": "PERMANENT" },
-    "false_effect": { "u_lose_effect": "random_enchant_ZOMBIE_KILLER_3" }
+    "required_event": "character_ranged_attacks_character",
+    "condition": { "and": [ { "npc_has_species": "ZOMBIE" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
-    "type": "effect_type",
-    "id": "random_enchant_ZOMBIE_KILLER_1",
-    "name": [ "ZOMBIE_KILLER_1" ],
-    "desc": [ "ZOMBIE_KILLER_1" ],
-    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 1 } ] } ]
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[ZOMBIE_KILLER]",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "condition": { "and": [ { "npc_has_species": "ZOMBIE" } ] },
+    "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
-    "type": "effect_type",
-    "id": "random_enchant_ZOMBIE_KILLER_2",
-    "name": [ "ZOMBIE_KILLER_2" ],
-    "desc": [ "ZOMBIE_KILLER_2" ],
-    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 2 } ] } ]
-  },
-  {
-    "type": "effect_type",
-    "id": "random_enchant_ZOMBIE_KILLER_3",
-    "name": [ "ZOMBIE_KILLER_3" ],
-    "desc": [ "ZOMBIE_KILLER_3" ],
-    "enchantments": [ { "hit_you_effect": [ { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 3 } ] } ]
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[ZOMBIE_KILLER]",
+    "effect": [
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_3" },
+        "then": {
+          "u_cast_spell": { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 3, "max_level": 3 },
+          "loc": { "context_val": "loc" }
+        },
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_2" },
+            "then": {
+              "u_cast_spell": { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 2, "max_level": 2 },
+              "loc": { "context_val": "loc" }
+            },
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_ZOMBIE_KILLER_1" },
+                "then": {
+                  "u_cast_spell": { "id": "random_enchant_ZOMBIE_KILLER", "min_level": 1, "max_level": 1 },
+                  "loc": { "context_val": "loc" }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "random_enchant_ZOMBIE_KILLER",
