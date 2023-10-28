@@ -189,6 +189,29 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_LIFT_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_LIFT_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_LIFT_3" } ] }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[LIFT]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_LIFT_1" },
+          { "npc_has_flag": "random_enchant_LIFT_2" },
+          { "npc_has_flag": "random_enchant_LIFT_3" }
+        ]
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
           { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_1" } ] },
           { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_2" } ] },
           { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_STOP_TIME_3" } ] }

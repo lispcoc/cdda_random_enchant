@@ -21,6 +21,7 @@
         "if": { "x_in_y_chance": { "x": { "math": [ "_chance" ] }, "y": 128 } },
         "then": [
           { "map_spawn_item": "enchant_crystal" },
+          { "u_message": "<item_name:enchant_crystal>を発見した！", "type": "good" },
           { "u_location_variable": { "context_val": "loc" } },
           {
             "u_map_run_item_eocs": "all",
@@ -44,25 +45,30 @@
     "condition": { "expects_vars": [ "base_rank" ] },
     "effect": [
       { "math": [ "_group_found", "=", "0" ] },
-      { "u_message": "<context_val:base_rank>" },
-      { "u_message": "<context_val:upper_chance>" },
+      { "u_message": "<context_val:base_rank>", "type": "debug" },
+      { "u_message": "<context_val:upper_chance>", "type": "debug" },
       {
         "foreach": "array",
         "var": { "context_val": "target" },
         "target": [ "1", "2", "3" ],
         "effect": [
           { "math": [ "_rank", "=", "clamp( _base_rank + rng(-0.75, 0.75) , 1, 3 )" ] },
-          { "u_message": "<context_val:rank>" },
+          { "u_message": "<context_val:rank>", "type": "debug" },
           {
             "if": { "compare_string": [ "zombie", { "context_val": "group" } ] },
             "then": [
               {
                 "weighted_list_eocs": [
-                  [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 20 } ],
-                  [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 10 } ],
-                  [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 10 } ],
+                  [ "EOC_random_enchant_lottery[BLEED]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
-                  [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 10 } ]
+                  [ "EOC_random_enchant_lottery[DRAIN_STAMINA]", { "const": 5 } ],
+                  [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[INSECT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[LIFT]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[PLANT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 1 } ],
+                  [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 100 } ]
                 ]
               },
               { "math": [ "_group_found", "=", "1" ] }
@@ -73,11 +79,16 @@
             "then": [
               {
                 "weighted_list_eocs": [
-                  [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 20 } ],
-                  [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 10 } ],
-                  [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 10 } ],
+                  [ "EOC_random_enchant_lottery[BLEED]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
-                  [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 10 } ]
+                  [ "EOC_random_enchant_lottery[DRAIN_STAMINA]", { "const": 5 } ],
+                  [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[INSECT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[LIFT]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[PLANT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[STOP_TIME]", { "const": 1 } ],
+                  [ "EOC_random_enchant_lottery[ZOMBIE_KILLER]", { "const": 100 } ]
                 ]
               }
             ]

@@ -25,11 +25,14 @@
     "effect": [
       {
         "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_3" },
-        "then": { "npc_add_effect": "bleed", "duration": 120 },
+        "then": { "npc_add_effect": "bleed", "duration": 240 },
         "else": {
           "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_2" },
-          "then": { "npc_add_effect": "bleed", "duration": 90 },
-          "else": { "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_1" }, "then": { "npc_add_effect": "bleed", "duration": 60 } }
+          "then": { "npc_add_effect": "bleed", "duration": 180 },
+          "else": {
+            "if": { "u_has_wielded_with_flag": "random_enchant_BLEED_1" },
+            "then": { "npc_add_effect": "bleed", "duration": 120 }
+          }
         }
       }
     ]

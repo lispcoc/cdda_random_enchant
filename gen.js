@@ -9,6 +9,7 @@ var list = [
     {"id": "DRAIN_HP", "name": "HP回復", "info": "このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"},
     {"id": "DRAIN_MANA", "name": "マナ回復", "info": "このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"},
     {"id": "DRAIN_STAMINA", "name": "スタミナ回復", "info": "このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"},
+    {"id": "LIFT", "name": "重量挙げ", "info": "このアイテムは装備している間、<info>所持重量を増加</info>させます。"},
     {"id": "STOP_TIME", "name": "時間停止", "info": "このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"},
     {"id": "DEBUG_DEATH", "name": "即死(デバッグ)", "info": "このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"},
 ]

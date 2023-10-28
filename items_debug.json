@@ -56,6 +56,13 @@
     "flags": [ "random_enchant_DRAIN_STAMINA_3" ]
   },
   {
+    "id": "enchant_crystal_debug_[LIFT]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(重量挙げ)" },
+    "flags": [ "random_enchant_LIFT_3" ]
+  },
+  {
     "id": "enchant_crystal_debug_[STOP_TIME]",
     "type": "TOOL",
     "copy-from": "enchant_crystal",

@@ -1,0 +1,46 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[LIFT]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[LIFT]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[LIFT]",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_LIFT_3" },
+        "then": [
+          { "math": [ "u_random_enchant_LIFT_val", "=", "30000" ] },
+          { "u_add_effect": "random_enchant_LIFT", "duration": "PERMANENT" }
+        ],
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_LIFT_2" },
+            "then": [
+              { "math": [ "u_random_enchant_LIFT_val", "=", "20000" ] },
+              { "u_add_effect": "random_enchant_LIFT", "duration": "PERMANENT" }
+            ],
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_LIFT_1" },
+                "then": [
+                  { "math": [ "u_random_enchant_LIFT_val", "=", "10000" ] },
+                  { "u_add_effect": "random_enchant_LIFT", "duration": "PERMANENT" }
+                ],
+                "else": { "u_lose_effect": "random_enchant_LIFT" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_LIFT",
+    "enchantments": [ { "values": [ { "value": "CARRY_WEIGHT", "add": { "math": [ "u_random_enchant_LIFT_val" ] } } ] } ]
+  }
+]

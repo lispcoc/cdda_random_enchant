@@ -120,6 +120,21 @@
     "info": "[<good>スタミナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
   },
   {
+    "id": "random_enchant_LIFT_1",
+    "type": "json_flag",
+    "info": "[<good>重量挙げLv:1</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+  },
+  {
+    "id": "random_enchant_LIFT_2",
+    "type": "json_flag",
+    "info": "[<good>重量挙げLv:2</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+  },
+  {
+    "id": "random_enchant_LIFT_3",
+    "type": "json_flag",
+    "info": "[<good>重量挙げLv:3</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+  },
+  {
     "id": "random_enchant_STOP_TIME_1",
     "type": "json_flag",
     "info": "[<good>時間停止Lv:1</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
