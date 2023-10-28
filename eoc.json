@@ -17,14 +17,14 @@
       {
         "switch": { "math": [ "_difficulty" ] },
         "cases": [
-          { "case": 0, "effect": { "math": [ "_rank", "=", "1" ] } },
-          { "case": 10, "effect": { "math": [ "_rank", "=", "2" ] } },
-          { "case": 20, "effect": { "math": [ "_rank", "=", "3" ] } }
+          { "case": 0, "effect": { "math": [ "_max_rank", "=", "1" ] } },
+          { "case": 10, "effect": { "math": [ "_max_rank", "=", "2" ] } },
+          { "case": 20, "effect": { "math": [ "_max_rank", "=", "3" ] } }
         ]
       },
       {
         "run_eoc_with": "EOC_random_enchant_lottery_main",
-        "variables": { "rank": { "context_val": "rank" }, "group": "zombie" }
+        "variables": { "rank": { "context_val": "max_rank" }, "group": "zombie" }
       },
       { "map_spawn_item": "enchant_crystal" },
       { "u_location_variable": { "context_val": "loc" } },
