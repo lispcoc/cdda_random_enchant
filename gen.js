@@ -2,6 +2,8 @@ const fs = require('fs')
 
 var list = [
     {"id": "ZOMBIE_KILLER", "name": "ゾンビ特攻", "info": "このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"},
+    {"id": "PLANT_KILLER", "name": "植物特攻", "info": "このアイテムは<info>植物に追加ダメージ</info>を与えます。"},
+    {"id": "INSECT_KILLER", "name": "虫特攻", "info": "このアイテムは<info>虫に追加ダメージ</info>を与えます。"},
     {"id": "FLIGHT_KILLER", "name": "飛行特攻", "info": "このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"},
     {"id": "DRAIN_HP", "name": "HP回復", "info": "このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"},
     {"id": "DRAIN_MANA", "name": "マナ回復", "info": "このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"},

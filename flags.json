@@ -15,6 +15,36 @@
     "info": "[<good>ゾンビ特攻Lv:3</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
   },
   {
+    "id": "random_enchant_PLANT_KILLER_1",
+    "type": "json_flag",
+    "info": "[<good>植物特攻Lv:1</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_PLANT_KILLER_2",
+    "type": "json_flag",
+    "info": "[<good>植物特攻Lv:2</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_PLANT_KILLER_3",
+    "type": "json_flag",
+    "info": "[<good>植物特攻Lv:3</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_INSECT_KILLER_1",
+    "type": "json_flag",
+    "info": "[<good>虫特攻Lv:1</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_INSECT_KILLER_2",
+    "type": "json_flag",
+    "info": "[<good>虫特攻Lv:2</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_INSECT_KILLER_3",
+    "type": "json_flag",
+    "info": "[<good>虫特攻Lv:3</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+  },
+  {
     "id": "random_enchant_FLIGHT_KILLER_1",
     "type": "json_flag",
     "info": "[<good>飛行特攻Lv:1</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"

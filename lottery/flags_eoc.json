@@ -19,6 +19,34 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_PLANT_KILLER_3" } }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[PLANT_KILLER]"
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_INSECT_KILLER_3" } }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[INSECT_KILLER]"
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
           { "case": 1, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_1" } },
           { "case": 2, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_2" } },
           { "case": 3, "effect": { "npc_set_flag": "random_enchant_FLIGHT_KILLER_3" } }
