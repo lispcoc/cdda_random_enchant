@@ -2,33 +2,25 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_character_[PLANT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_character",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "PLANT" } ] },
+    "condition": { "npc_has_species": "PLANT" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[PLANT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[PLANT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_monster",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "PLANT" } ] },
+    "condition": { "npc_has_species": "PLANT" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[PLANT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_character_[PLANT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_character",
-    "condition": { "and": [ { "npc_has_species": "PLANT" } ] },
+    "condition": { "npc_has_species": "PLANT" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[PLANT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_monster_[PLANT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_monster",
-    "condition": { "and": [ { "npc_has_species": "PLANT" } ] },
+    "condition": { "npc_has_species": "PLANT" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[PLANT_KILLER]" } ]
   },
   {

@@ -2,46 +2,24 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_character_[INSECT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_character",
-    "condition": {
-      "and": [
-        { "math": [ "_hits", "==", "1" ] },
-        {
-          "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ]
-        }
-      ]
-    },
+    "condition": { "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[INSECT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[INSECT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_monster",
-    "condition": {
-      "and": [
-        { "math": [ "_hits", "==", "1" ] },
-        {
-          "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ]
-        }
-      ]
-    },
+    "condition": { "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[INSECT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_character_[INSECT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_character",
     "condition": { "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[INSECT_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_monster_[INSECT_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_monster",
     "condition": { "or": [ { "npc_has_species": "INSECT" }, { "npc_has_species": "INSECT_FLYING" }, { "npc_has_species": "SPIDER" } ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[INSECT_KILLER]" } ]
   },

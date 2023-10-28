@@ -1,0 +1,40 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_character_[DRAIN_STAMINA]",
+    "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_STAMINA]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster_[DRAIN_STAMINA]",
+    "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_STAMINA]" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[DRAIN_STAMINA]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_STAMINA]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[DRAIN_STAMINA]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_STAMINA]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[DRAIN_STAMINA]",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_STAMINA_3" },
+        "then": { "math": [ "u_val('stamina')", "+=", "20" ] },
+        "else": {
+          "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_STAMINA_2" },
+          "then": { "math": [ "u_val('stamina')", "+=", "12" ] },
+          "else": {
+            "if": { "u_has_wielded_with_flag": "random_enchant_DRAIN_STAMINA_1" },
+            "then": { "math": [ "u_val('stamina')", "+=", "5" ] }
+          }
+        }
+      }
+    ]
+  }
+]

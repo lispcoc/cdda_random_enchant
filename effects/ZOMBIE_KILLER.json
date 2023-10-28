@@ -2,33 +2,25 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_character_[ZOMBIE_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_character",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "ZOMBIE" } ] },
+    "condition": { "npc_has_species": "ZOMBIE" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[ZOMBIE_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_monster",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] }, { "npc_has_species": "ZOMBIE" } ] },
+    "condition": { "npc_has_species": "ZOMBIE" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_character_[ZOMBIE_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_character",
-    "condition": { "and": [ { "npc_has_species": "ZOMBIE" } ] },
+    "condition": { "npc_has_species": "ZOMBIE" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_monster_[ZOMBIE_KILLER]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_monster",
-    "condition": { "and": [ { "npc_has_species": "ZOMBIE" } ] },
+    "condition": { "npc_has_species": "ZOMBIE" },
     "effect": [ { "run_eocs": "EOC_random_enchant_[ZOMBIE_KILLER]" } ]
   },
   {

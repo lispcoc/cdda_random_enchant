@@ -90,6 +90,21 @@
     "info": "[<good>マナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
   },
   {
+    "id": "random_enchant_DRAIN_STAMINA_1",
+    "type": "json_flag",
+    "info": "[<good>スタミナ回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+  },
+  {
+    "id": "random_enchant_DRAIN_STAMINA_2",
+    "type": "json_flag",
+    "info": "[<good>スタミナ回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+  },
+  {
+    "id": "random_enchant_DRAIN_STAMINA_3",
+    "type": "json_flag",
+    "info": "[<good>スタミナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+  },
+  {
     "id": "random_enchant_STOP_TIME_1",
     "type": "json_flag",
     "info": "[<good>時間停止Lv:1</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"

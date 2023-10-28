@@ -1,6 +1,36 @@
 [
   {
     "type": "effect_on_condition",
+    "id": "EOC_random_enchant_spawn",
+    "effect": [
+      {
+        "switch": { "math": [ "_difficulty" ] },
+        "cases": [
+          { "case": 0, "effect": { "math": [ "_max_rank", "=", "1" ] } },
+          { "case": 10, "effect": { "math": [ "_max_rank", "=", "2" ] } },
+          { "case": 20, "effect": { "math": [ "_max_rank", "=", "3" ] } }
+        ]
+      },
+      { "u_message": "<context_val:difficulty>" },
+      { "set_string_var": "zombie", "target_var": { "context_val": "group" } },
+      { "map_spawn_item": "enchant_crystal" },
+      { "u_location_variable": { "context_val": "loc" } },
+      {
+        "u_map_run_item_eocs": "all",
+        "loc": { "context_val": "loc" },
+        "search_data": [ { "id": "enchant_crystal" } ],
+        "true_eocs": [
+          {
+            "id": "EOC_random_enchant_spawn_add_flag",
+            "condition": { "not": { "npc_has_flag": "random_enchant_ALREADY_ENCHANT" } },
+            "effect": [ { "run_eocs": "EOC_random_enchant_lottery_main" }, { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" } ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_random_enchant_lottery_main",
     "condition": { "expects_vars": [ "max_rank" ] },
     "effect": [

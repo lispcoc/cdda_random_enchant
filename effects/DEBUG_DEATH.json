@@ -2,31 +2,21 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_character_[DEBUG_DEATH]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_character",
-    "condition": { "math": [ "_hits", "==", "1" ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[DEBUG_DEATH]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_monster",
-    "condition": { "math": [ "_hits", "==", "1" ] },
     "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_character_[DEBUG_DEATH]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_character",
     "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_monster_[DEBUG_DEATH]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_monster",
     "effect": [ { "run_eocs": "EOC_random_enchant_[DEBUG_DEATH]" } ]
   },
   {

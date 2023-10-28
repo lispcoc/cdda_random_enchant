@@ -2,31 +2,21 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_character_[DRAIN_HP]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_character",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
     "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_HP]" }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_melee_attacks_monster_[DRAIN_HP]",
-    "eoc_type": "EVENT",
-    "required_event": "character_melee_attacks_monster",
-    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
     "effect": { "run_eocs": "EOC_random_enchant_[DRAIN_HP]" }
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_character_[DRAIN_HP]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_character",
     "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_HP]" } ]
   },
   {
     "type": "effect_on_condition",
     "id": "EOC_random_enchant_ranged_attacks_monster_[DRAIN_HP]",
-    "eoc_type": "EVENT",
-    "required_event": "character_ranged_attacks_monster",
     "effect": [ { "run_eocs": "EOC_random_enchant_[DRAIN_HP]" } ]
   },
   {

@@ -7,6 +7,7 @@ var list = [
     {"id": "FLIGHT_KILLER", "name": "飛行特攻", "info": "このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"},
     {"id": "DRAIN_HP", "name": "HP回復", "info": "このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"},
     {"id": "DRAIN_MANA", "name": "マナ回復", "info": "このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"},
+    {"id": "DRAIN_STAMINA", "name": "スタミナ回復", "info": "このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"},
     {"id": "STOP_TIME", "name": "時間停止", "info": "このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"},
     {"id": "DEBUG_DEATH", "name": "即死(デバッグ)", "info": "このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"},
 ]

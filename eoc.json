@@ -12,32 +12,80 @@
   },
   {
     "type": "effect_on_condition",
-    "id": "EOC_random_enchant_spawn",
-    "effect": [
-      {
-        "switch": { "math": [ "_difficulty" ] },
-        "cases": [
-          { "case": 0, "effect": { "math": [ "_max_rank", "=", "1" ] } },
-          { "case": 10, "effect": { "math": [ "_max_rank", "=", "2" ] } },
-          { "case": 20, "effect": { "math": [ "_max_rank", "=", "3" ] } }
-        ]
-      },
-      { "u_message": "<context_val:difficulty>" },
-      { "set_string_var": "zombie", "target_var": { "context_val": "group" } },
-      { "map_spawn_item": "enchant_crystal" },
-      { "u_location_variable": { "context_val": "loc" } },
-      {
-        "u_map_run_item_eocs": "all",
-        "loc": { "context_val": "loc" },
-        "search_data": [ { "id": "enchant_crystal" } ],
-        "true_eocs": [
-          {
-            "id": "EOC_random_enchant_spawn_add_flag",
-            "condition": { "not": { "npc_has_flag": "random_enchant_ALREADY_ENCHANT" } },
-            "effect": [ { "run_eocs": "EOC_random_enchant_lottery_main" }, { "npc_set_flag": "random_enchant_ALREADY_ENCHANT" } ]
-          }
-        ]
-      }
-    ]
+    "id": "EOC_random_enchant_melee_attacks_character",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_character",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
+    "effect": {
+      "run_eocs": [
+        "EOC_random_enchant_melee_attacks_character_[DEBUG_DEATH]",
+        "EOC_random_enchant_melee_attacks_character_[DRAIN_HP]",
+        "EOC_random_enchant_melee_attacks_character_[DRAIN_MANA]",
+        "EOC_random_enchant_melee_attacks_character_[DRAIN_STAMINA]",
+        "EOC_random_enchant_melee_attacks_character_[FLIGHT_KILLER]",
+        "EOC_random_enchant_melee_attacks_character_[INSECT_KILLER]",
+        "EOC_random_enchant_melee_attacks_character_[PLANT_KILLER]",
+        "EOC_random_enchant_melee_attacks_character_[STOP_TIME]",
+        "EOC_random_enchant_melee_attacks_character_[ZOMBIE_KILLER]"
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_melee_attacks_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_melee_attacks_monster",
+    "condition": { "and": [ { "math": [ "_hits", "==", "1" ] } ] },
+    "effect": {
+      "run_eocs": [
+        "EOC_random_enchant_melee_attacks_monster_[DEBUG_DEATH]",
+        "EOC_random_enchant_melee_attacks_monster_[DRAIN_HP]",
+        "EOC_random_enchant_melee_attacks_monster_[DRAIN_MANA]",
+        "EOC_random_enchant_melee_attacks_monster_[DRAIN_STAMINA]",
+        "EOC_random_enchant_melee_attacks_monster_[FLIGHT_KILLER]",
+        "EOC_random_enchant_melee_attacks_monster_[INSECT_KILLER]",
+        "EOC_random_enchant_melee_attacks_monster_[PLANT_KILLER]",
+        "EOC_random_enchant_melee_attacks_monster_[STOP_TIME]",
+        "EOC_random_enchant_melee_attacks_monster_[ZOMBIE_KILLER]"
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_character",
+    "effect": {
+      "run_eocs": [
+        "EOC_random_enchant_ranged_attacks_character_[DEBUG_DEATH]",
+        "EOC_random_enchant_ranged_attacks_character_[DRAIN_HP]",
+        "EOC_random_enchant_ranged_attacks_character_[DRAIN_MANA]",
+        "EOC_random_enchant_ranged_attacks_character_[DRAIN_STAMINA]",
+        "EOC_random_enchant_ranged_attacks_character_[FLIGHT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_character_[INSECT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_character_[PLANT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_character_[STOP_TIME]",
+        "EOC_random_enchant_ranged_attacks_character_[ZOMBIE_KILLER]"
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_ranged_attacks_monster",
+    "effect": {
+      "run_eocs": [
+        "EOC_random_enchant_ranged_attacks_monster_[DEBUG_DEATH]",
+        "EOC_random_enchant_ranged_attacks_monster_[DRAIN_HP]",
+        "EOC_random_enchant_ranged_attacks_monster_[DRAIN_MANA]",
+        "EOC_random_enchant_ranged_attacks_monster_[DRAIN_STAMINA]",
+        "EOC_random_enchant_ranged_attacks_monster_[FLIGHT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_monster_[INSECT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_monster_[PLANT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_monster_[STOP_TIME]",
+        "EOC_random_enchant_ranged_attacks_monster_[ZOMBIE_KILLER]"
+      ]
+    }
   }
 ]

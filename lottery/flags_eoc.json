@@ -89,6 +89,20 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
+          { "case": 1, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_1" } },
+          { "case": 2, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_2" } },
+          { "case": 3, "effect": { "npc_set_flag": "random_enchant_DRAIN_STAMINA_3" } }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[DRAIN_STAMINA]"
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
           { "case": 1, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_1" } },
           { "case": 2, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_2" } },
           { "case": 3, "effect": { "npc_set_flag": "random_enchant_STOP_TIME_3" } }
