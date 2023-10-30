@@ -25,6 +25,7 @@
         "EOC_random_enchant_melee_attacks_character_[DRAIN_STAMINA]",
         "EOC_random_enchant_melee_attacks_character_[FLIGHT_KILLER]",
         "EOC_random_enchant_melee_attacks_character_[INSECT_KILLER]",
+        "EOC_random_enchant_melee_attacks_character_[MORALE]",
         "EOC_random_enchant_melee_attacks_character_[PLANT_KILLER]",
         "EOC_random_enchant_melee_attacks_character_[STOP_TIME]",
         "EOC_random_enchant_melee_attacks_character_[ZOMBIE_KILLER]"
@@ -46,6 +47,7 @@
         "EOC_random_enchant_melee_attacks_monster_[DRAIN_STAMINA]",
         "EOC_random_enchant_melee_attacks_monster_[FLIGHT_KILLER]",
         "EOC_random_enchant_melee_attacks_monster_[INSECT_KILLER]",
+        "EOC_random_enchant_melee_attacks_monster_[MORALE]",
         "EOC_random_enchant_melee_attacks_monster_[PLANT_KILLER]",
         "EOC_random_enchant_melee_attacks_monster_[STOP_TIME]",
         "EOC_random_enchant_melee_attacks_monster_[ZOMBIE_KILLER]"
@@ -66,6 +68,7 @@
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_STAMINA]",
         "EOC_random_enchant_ranged_attacks_character_[FLIGHT_KILLER]",
         "EOC_random_enchant_ranged_attacks_character_[INSECT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_character_[MORALE]",
         "EOC_random_enchant_ranged_attacks_character_[PLANT_KILLER]",
         "EOC_random_enchant_ranged_attacks_character_[STOP_TIME]",
         "EOC_random_enchant_ranged_attacks_character_[ZOMBIE_KILLER]"
@@ -86,6 +89,7 @@
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_STAMINA]",
         "EOC_random_enchant_ranged_attacks_monster_[FLIGHT_KILLER]",
         "EOC_random_enchant_ranged_attacks_monster_[INSECT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_monster_[MORALE]",
         "EOC_random_enchant_ranged_attacks_monster_[PLANT_KILLER]",
         "EOC_random_enchant_ranged_attacks_monster_[STOP_TIME]",
         "EOC_random_enchant_ranged_attacks_monster_[ZOMBIE_KILLER]"

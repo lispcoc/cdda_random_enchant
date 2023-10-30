@@ -135,6 +135,21 @@
     "info": "[<good>重量挙げLv:3</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
   },
   {
+    "id": "random_enchant_MORALE_1",
+    "type": "json_flag",
+    "info": "[<good>気分屋Lv:1</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+  },
+  {
+    "id": "random_enchant_MORALE_2",
+    "type": "json_flag",
+    "info": "[<good>気分屋Lv:2</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+  },
+  {
+    "id": "random_enchant_MORALE_3",
+    "type": "json_flag",
+    "info": "[<good>気分屋Lv:3</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+  },
+  {
     "id": "random_enchant_STOP_TIME_1",
     "type": "json_flag",
     "info": "[<good>時間停止Lv:1</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
