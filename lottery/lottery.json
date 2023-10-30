@@ -60,10 +60,13 @@
               {
                 "weighted_list_eocs": [
                   [ "EOC_random_enchant_lottery[BLEED]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[COLD]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_STAMINA]", { "const": 5 } ],
+                  [ "EOC_random_enchant_lottery[ELEC]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[HEAT]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[INSECT_KILLER]", { "const": 100 } ],
                   [ "EOC_random_enchant_lottery[LIFT]", { "const": 20 } ],
                   [ "EOC_random_enchant_lottery[MORALE]", { "const": 10 } ],
@@ -81,10 +84,13 @@
               {
                 "weighted_list_eocs": [
                   [ "EOC_random_enchant_lottery[BLEED]", { "const": 20 } ],
+                  [ "EOC_random_enchant_lottery[COLD]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_HP]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_MANA]", { "const": 10 } ],
                   [ "EOC_random_enchant_lottery[DRAIN_STAMINA]", { "const": 5 } ],
+                  [ "EOC_random_enchant_lottery[ELEC]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[FLIGHT_KILLER]", { "const": 100 } ],
+                  [ "EOC_random_enchant_lottery[HEAT]", { "const": 5 } ],
                   [ "EOC_random_enchant_lottery[INSECT_KILLER]", { "const": 100 } ],
                   [ "EOC_random_enchant_lottery[LIFT]", { "const": 20 } ],
                   [ "EOC_random_enchant_lottery[MORALE]", { "const": 10 } ],

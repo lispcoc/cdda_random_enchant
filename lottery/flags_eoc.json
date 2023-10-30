@@ -258,6 +258,75 @@
       {
         "switch": { "math": [ "_rank" ] },
         "cases": [
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_ELEC_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_ELEC_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_ELEC_3" } ] }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[ELEC]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_ELEC_1" },
+          { "npc_has_flag": "random_enchant_ELEC_2" },
+          { "npc_has_flag": "random_enchant_ELEC_3" }
+        ]
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_HEAT_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_HEAT_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_HEAT_3" } ] }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[HEAT]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_HEAT_1" },
+          { "npc_has_flag": "random_enchant_HEAT_2" },
+          { "npc_has_flag": "random_enchant_HEAT_3" }
+        ]
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
+          { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_COLD_1" } ] },
+          { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_COLD_2" } ] },
+          { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_COLD_3" } ] }
+        ]
+      }
+    ],
+    "id": "EOC_random_enchant_lottery[COLD]",
+    "condition": {
+      "not": {
+        "or": [
+          { "npc_has_flag": "random_enchant_COLD_1" },
+          { "npc_has_flag": "random_enchant_COLD_2" },
+          { "npc_has_flag": "random_enchant_COLD_3" }
+        ]
+      }
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "switch": { "math": [ "_rank" ] },
+        "cases": [
           { "case": 1, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_1" } ] },
           { "case": 2, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_2" } ] },
           { "case": 3, "effect": [ { "npc_set_flag": "random_enchant_DEBUG_DEATH_3" } ] }

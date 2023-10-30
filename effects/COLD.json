@@ -1,0 +1,95 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[COLD]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[COLD]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[COLD]",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_COLD_3" },
+        "then": [
+          { "math": [ "u_random_enchant_COLD_val", "=", "10" ] },
+          { "u_add_effect": "random_enchant_COLD", "duration": "PERMANENT" }
+        ],
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_COLD_2" },
+            "then": [
+              { "math": [ "u_random_enchant_COLD_val", "=", "7" ] },
+              { "u_add_effect": "random_enchant_COLD", "duration": "PERMANENT" }
+            ],
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_COLD_1" },
+                "then": [
+                  { "math": [ "u_random_enchant_COLD_val", "=", "4" ] },
+                  { "u_add_effect": "random_enchant_COLD", "duration": "PERMANENT" }
+                ],
+                "else": { "u_lose_effect": "random_enchant_COLD" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[COLD]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_range_[COLD]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[COLD]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_range_[COLD]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_range_[COLD]",
+    "effect": [
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_COLD_3" },
+        "then": { "u_cast_spell": { "id": "random_enchant_COLD", "min_level": 3, "max_level": 3 }, "loc": { "context_val": "loc" } },
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_COLD_2" },
+            "then": { "u_cast_spell": { "id": "random_enchant_COLD", "min_level": 2, "max_level": 2 }, "loc": { "context_val": "loc" } },
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_COLD_1" },
+                "then": { "u_cast_spell": { "id": "random_enchant_COLD", "min_level": 1, "max_level": 1 }, "loc": { "context_val": "loc" } }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_COLD",
+    "enchantments": [ { "values": [ { "value": "ITEM_DAMAGE_COLD", "add": { "math": [ "u_random_enchant_COLD_val" ] } } ] } ]
+  },
+  {
+    "id": "random_enchant_COLD",
+    "type": "SPELL",
+    "name": "random_enchant_COLD",
+    "description": "random_enchant_COLD",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "cold",
+    "max_level": 1,
+    "base_casting_time": 0,
+    "min_damage": { "math": [ "u_random_enchant_COLD_val" ] },
+    "max_damage": { "math": [ "u_random_enchant_COLD_val" ] },
+    "min_range": 1
+  }
+]

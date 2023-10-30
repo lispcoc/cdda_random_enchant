@@ -165,6 +165,51 @@
     "info": "[<good>時間停止Lv:3</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
   },
   {
+    "id": "random_enchant_ELEC_1",
+    "type": "json_flag",
+    "info": "[<good>電撃攻撃Lv:1</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_ELEC_2",
+    "type": "json_flag",
+    "info": "[<good>電撃攻撃Lv:2</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_ELEC_3",
+    "type": "json_flag",
+    "info": "[<good>電撃攻撃Lv:3</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_HEAT_1",
+    "type": "json_flag",
+    "info": "[<good>熱攻撃Lv:1</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_HEAT_2",
+    "type": "json_flag",
+    "info": "[<good>熱攻撃Lv:2</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_HEAT_3",
+    "type": "json_flag",
+    "info": "[<good>熱攻撃Lv:3</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_COLD_1",
+    "type": "json_flag",
+    "info": "[<good>冷気攻撃Lv:1</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_COLD_2",
+    "type": "json_flag",
+    "info": "[<good>冷気攻撃Lv:2</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+  },
+  {
+    "id": "random_enchant_COLD_3",
+    "type": "json_flag",
+    "info": "[<good>冷気攻撃Lv:3</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+  },
+  {
     "id": "random_enchant_DEBUG_DEATH_1",
     "type": "json_flag",
     "info": "[<good>即死(デバッグ)Lv:1</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"

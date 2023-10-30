@@ -11,6 +11,16 @@
   },
   {
     "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[MORALE]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[MORALE]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[MORALE]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[MORALE]" } ]
+  },
+  {
+    "type": "effect_on_condition",
     "id": "EOC_random_enchant_wields_item_[MORALE]",
     "eoc_type": "EVENT",
     "required_event": "character_wields_item",

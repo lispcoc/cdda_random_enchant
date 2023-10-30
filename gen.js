@@ -12,6 +12,9 @@ var list = [
     {"id": "LIFT", "name": "重量挙げ", "info": "このアイテムは装備している間、<info>所持重量を増加</info>させます。"},
     {"id": "MORALE", "name": "気分屋", "info": "このアイテムの攻撃力は<info>意欲に依存</info>します。"},
     {"id": "STOP_TIME", "name": "時間停止", "info": "このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"},
+    {"id": "ELEC", "name": "電撃攻撃", "info": "このアイテムは<info>電撃の追加ダメージ</info>を与えます。"},
+    {"id": "HEAT", "name": "熱攻撃", "info": "このアイテムは<info>熱の追加ダメージ</info>を与えます。"},
+    {"id": "COLD", "name": "冷気攻撃", "info": "このアイテムは<info>冷気の追加ダメージ</info>を与えます。"},
     {"id": "DEBUG_DEATH", "name": "即死(デバッグ)", "info": "このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"},
 ]
 

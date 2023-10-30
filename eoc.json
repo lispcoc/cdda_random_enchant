@@ -62,11 +62,14 @@
     "effect": {
       "run_eocs": [
         "EOC_random_enchant_ranged_attacks_character_[BLEED]",
+        "EOC_random_enchant_ranged_attacks_character_[COLD]",
         "EOC_random_enchant_ranged_attacks_character_[DEBUG_DEATH]",
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_HP]",
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_MANA]",
         "EOC_random_enchant_ranged_attacks_character_[DRAIN_STAMINA]",
+        "EOC_random_enchant_ranged_attacks_character_[ELEC]",
         "EOC_random_enchant_ranged_attacks_character_[FLIGHT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_character_[HEAT]",
         "EOC_random_enchant_ranged_attacks_character_[INSECT_KILLER]",
         "EOC_random_enchant_ranged_attacks_character_[MORALE]",
         "EOC_random_enchant_ranged_attacks_character_[PLANT_KILLER]",
@@ -83,11 +86,14 @@
     "effect": {
       "run_eocs": [
         "EOC_random_enchant_ranged_attacks_monster_[BLEED]",
+        "EOC_random_enchant_ranged_attacks_monster_[COLD]",
         "EOC_random_enchant_ranged_attacks_monster_[DEBUG_DEATH]",
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_HP]",
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_MANA]",
         "EOC_random_enchant_ranged_attacks_monster_[DRAIN_STAMINA]",
+        "EOC_random_enchant_ranged_attacks_monster_[ELEC]",
         "EOC_random_enchant_ranged_attacks_monster_[FLIGHT_KILLER]",
+        "EOC_random_enchant_ranged_attacks_monster_[HEAT]",
         "EOC_random_enchant_ranged_attacks_monster_[INSECT_KILLER]",
         "EOC_random_enchant_ranged_attacks_monster_[MORALE]",
         "EOC_random_enchant_ranged_attacks_monster_[PLANT_KILLER]",

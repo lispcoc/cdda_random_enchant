@@ -1,0 +1,95 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_wields_item_[ELEC]",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "effect": [ { "run_eocs": "EOC_random_enchant_[ELEC]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_[ELEC]",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_3" },
+        "then": [
+          { "math": [ "u_random_enchant_ELEC_val", "=", "10" ] },
+          { "u_add_effect": "random_enchant_ELEC", "duration": "PERMANENT" }
+        ],
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_2" },
+            "then": [
+              { "math": [ "u_random_enchant_ELEC_val", "=", "7" ] },
+              { "u_add_effect": "random_enchant_ELEC", "duration": "PERMANENT" }
+            ],
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_1" },
+                "then": [
+                  { "math": [ "u_random_enchant_ELEC_val", "=", "4" ] },
+                  { "u_add_effect": "random_enchant_ELEC", "duration": "PERMANENT" }
+                ],
+                "else": { "u_lose_effect": "random_enchant_ELEC" }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_character_[ELEC]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_range_[ELEC]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_ranged_attacks_monster_[ELEC]",
+    "effect": [ { "run_eocs": "EOC_random_enchant_range_[ELEC]" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_random_enchant_range_[ELEC]",
+    "effect": [
+      { "npc_location_variable": { "context_val": "loc" } },
+      {
+        "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_3" },
+        "then": { "u_cast_spell": { "id": "random_enchant_ELEC", "min_level": 3, "max_level": 3 }, "loc": { "context_val": "loc" } },
+        "else": [
+          {
+            "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_2" },
+            "then": { "u_cast_spell": { "id": "random_enchant_ELEC", "min_level": 2, "max_level": 2 }, "loc": { "context_val": "loc" } },
+            "else": [
+              {
+                "if": { "u_has_wielded_with_flag": "random_enchant_ELEC_1" },
+                "then": { "u_cast_spell": { "id": "random_enchant_ELEC", "min_level": 1, "max_level": 1 }, "loc": { "context_val": "loc" } }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "random_enchant_ELEC",
+    "enchantments": [ { "values": [ { "value": "ITEM_DAMAGE_ELEC", "add": { "math": [ "u_random_enchant_ELEC_val" ] } } ] } ]
+  },
+  {
+    "id": "random_enchant_ELEC",
+    "type": "SPELL",
+    "name": "random_enchant_ELEC",
+    "description": "random_enchant_ELEC",
+    "valid_targets": [ "hostile" ],
+    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "electric",
+    "max_level": 1,
+    "base_casting_time": 0,
+    "min_damage": { "math": [ "u_random_enchant_ELEC_val" ] },
+    "max_damage": { "math": [ "u_random_enchant_ELEC_val" ] },
+    "min_range": 1
+  }
+]

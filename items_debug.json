@@ -77,6 +77,27 @@
     "flags": [ "random_enchant_STOP_TIME_3" ]
   },
   {
+    "id": "enchant_crystal_debug_[ELEC]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(電撃攻撃)" },
+    "flags": [ "random_enchant_ELEC_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[HEAT]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(熱攻撃)" },
+    "flags": [ "random_enchant_HEAT_3" ]
+  },
+  {
+    "id": "enchant_crystal_debug_[COLD]",
+    "type": "TOOL",
+    "copy-from": "enchant_crystal",
+    "name": { "str": "エンチャント・クリスタル(冷気攻撃)" },
+    "flags": [ "random_enchant_COLD_3" ]
+  },
+  {
     "id": "enchant_crystal_debug_[DEBUG_DEATH]",
     "type": "TOOL",
     "copy-from": "enchant_crystal",
