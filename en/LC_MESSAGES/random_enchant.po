@@ -1,0 +1,425 @@
+# ./mods/effects/COLD.json
+# type: SPELL /name
+msgid "random_enchant_COLD"
+msgstr ""
+
+# ./mods/effects/DEBUG_DEATH.json
+# type: SPELL /name
+msgid "random_enchant_DEBUG_DEATH"
+msgstr ""
+
+# ./mods/effects/DRAIN_HP.json
+# type: SPELL /name
+msgid "spell_random_enchant_DRAIN_HP"
+msgstr ""
+
+# ./mods/effects/ELEC.json
+# type: SPELL /name
+msgid "random_enchant_ELEC"
+msgstr ""
+
+# ./mods/effects/FLIGHT_KILLER.json
+# type: SPELL /name
+msgid "random_enchant_FLIGHT_KILLER"
+msgstr ""
+
+# ./mods/effects/HEAT.json
+# type: SPELL /name
+msgid "random_enchant_HEAT"
+msgstr ""
+
+# ./mods/effects/INSECT_KILLER.json
+# type: SPELL /name
+msgid "random_enchant_INSECT_KILLER"
+msgstr ""
+
+# ./mods/effects/PLANT_KILLER.json
+# type: SPELL /name
+msgid "random_enchant_PLANT_KILLER"
+msgstr ""
+
+# ./mods/effects/STOP_TIME.json
+# type: effect_on_condition /effect/0/then/1/u_message
+msgid "あなたは時を止めた！"
+msgstr ""
+
+# ./mods/effects/STOP_TIME.json
+# type: SPELL /name
+msgid "spell_random_enchant_STOP_TIME"
+msgstr ""
+
+# ./mods/effects/ZOMBIE_KILLER.json
+# type: SPELL /name
+msgid "random_enchant_ZOMBIE_KILLER"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>ゾンビ特攻Lv:1</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
+msgstr "[<good>Zombie Killer Lv:1</good>] This item gives <info>additional damage to zombies</info>."
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>ゾンビ特攻Lv:2</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
+msgstr "[<good>Zombie Killer Lv:2</good>] This item gives <info>additional damage to zombies</info>."
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>ゾンビ特攻Lv:3</good>]このアイテムは<info>ゾンビに追加ダメージ</info>を与えます。"
+msgstr "[<good>Zombie Killer Lv:3</good>] This item gives <info>additional damage to zombies</info>."
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>植物特攻Lv:1</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>植物特攻Lv:2</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>植物特攻Lv:3</good>]このアイテムは<info>植物に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>虫特攻Lv:1</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>虫特攻Lv:2</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>虫特攻Lv:3</good>]このアイテムは<info>虫に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>飛行特攻Lv:1</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>飛行特攻Lv:2</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>飛行特攻Lv:3</good>]このアイテムは<info>飛んでいる敵に追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>出血Lv:1</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>出血Lv:2</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>出血Lv:3</good>]このアイテムは攻撃が命中したときに<info>敵を出血</info>させます"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>HP回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>HP回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>HP回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>HPを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>マナ回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>マナ回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>マナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>マナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>スタミナ回復Lv:1</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>スタミナ回復Lv:2</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>スタミナ回復Lv:3</good>]このアイテムは攻撃が命中したときに<info>スタミナを回復</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>重量挙げLv:1</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>重量挙げLv:2</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>重量挙げLv:3</good>]このアイテムは装備している間、<info>所持重量を増加</info>させます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>気分屋Lv:1</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>気分屋Lv:2</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>気分屋Lv:3</good>]このアイテムの攻撃力は<info>意欲に依存</info>します。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>時間停止Lv:1</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>時間停止Lv:2</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>時間停止Lv:3</good>]このアイテムは攻撃が命中したときに<info>時を止める</info>ことがあります。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>電撃攻撃Lv:1</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>電撃攻撃Lv:2</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>電撃攻撃Lv:3</good>]このアイテムは<info>電撃の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>熱攻撃Lv:1</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>熱攻撃Lv:2</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>熱攻撃Lv:3</good>]このアイテムは<info>熱の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>冷気攻撃Lv:1</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>冷気攻撃Lv:2</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>冷気攻撃Lv:3</good>]このアイテムは<info>冷気の追加ダメージ</info>を与えます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>即死(デバッグ)Lv:1</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>即死(デバッグ)Lv:2</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
+msgstr ""
+
+# ./mods/flags.json
+# type: json_flag /info
+msgid "[<good>即死(デバッグ)Lv:3</good>]このアイテムは攻撃が命中したときに<info>敵を即死</info>させます。"
+msgstr ""
+
+# ./mods/items.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル"
+msgid_plural "エンチャント・クリスタルs"
+msgstr[0] ""
+
+# ./mods/items.json
+# type: TOOL /description
+msgid "武器に特殊な力を付与することのできる結晶です。一度使用すると力を失います。"
+msgstr ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(ゾンビ特攻)"
+msgid_plural "エンチャント・クリスタル(ゾンビ特攻)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(植物特攻)"
+msgid_plural "エンチャント・クリスタル(植物特攻)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(虫特攻)"
+msgid_plural "エンチャント・クリスタル(虫特攻)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(飛行特攻)"
+msgid_plural "エンチャント・クリスタル(飛行特攻)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(出血)"
+msgid_plural "エンチャント・クリスタル(出血)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(HP回復)"
+msgid_plural "エンチャント・クリスタル(HP回復)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(マナ回復)"
+msgid_plural "エンチャント・クリスタル(マナ回復)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(スタミナ回復)"
+msgid_plural "エンチャント・クリスタル(スタミナ回復)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(重量挙げ)"
+msgid_plural "エンチャント・クリスタル(重量挙げ)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(気分屋)"
+msgid_plural "エンチャント・クリスタル(気分屋)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(時間停止)"
+msgid_plural "エンチャント・クリスタル(時間停止)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(電撃攻撃)"
+msgid_plural "エンチャント・クリスタル(電撃攻撃)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(熱攻撃)"
+msgid_plural "エンチャント・クリスタル(熱攻撃)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(冷気攻撃)"
+msgid_plural "エンチャント・クリスタル(冷気攻撃)s"
+msgstr[0] ""
+
+# ./mods/items_debug.json
+# type: TOOL /name
+msgid "エンチャント・クリスタル(即死(デバッグ))"
+msgid_plural "エンチャント・クリスタル(即死(デバッグ))s"
+msgstr[0] ""
+
+# ./mods/item_eoc.json
+# type: effect_on_condition /effect/2/true_eocs/0/effect/3/u_message
+msgid "<npc_name>をエンチャントしました！"
+msgstr ""
+
+# ./mods/item_eoc.json
+# type: effect_on_condition /effect/2/true_eocs/0/false_effect/u_message
+msgid "<npc_name>はすでにエンチャントされている。"
+msgstr ""
+
+# ./mods/item_eoc.json
+# type: effect_on_condition /false_effect/u_message
+msgid "使用済です。"
+msgstr ""
+
+# ./mods/lottery/lottery.json
+# type: effect_on_condition /effect/3/then/1/u_message
+msgid "<item_name:enchant_crystal>を発見した！"
+msgstr ""
+
+# ./mods/lottery/lottery.json
+# type: effect_on_condition /effect/1/u_message
+msgid "<context_val:base_rank>"
+msgstr ""
+
+# ./mods/lottery/lottery.json
+# type: effect_on_condition /effect/2/u_message
+msgid "<context_val:upper_chance>"
+msgstr ""
+
+# ./mods/lottery/lottery.json
+# type: effect_on_condition /effect/3/effect/1/u_message
+msgid "<context_val:rank>"
+msgstr ""
+
+# ./mods/modinfo.json
+# type: MOD_INFO /name
+msgid "追加 - ランダムエンチャント"
+msgstr ""
+
+# ./mods/modinfo.json
+# type: MOD_INFO /description
+msgid "モンスターを倒したときにランダムで武器をエンチャントするアイテムを落とすようになります。"
+msgstr ""
