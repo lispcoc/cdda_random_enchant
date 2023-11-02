@@ -5,7 +5,7 @@ This Mod is a sample code of effect_on_condition.
 Please be aware that this may disrupt game balance or cause bugs.
 
 ## Install
-1. Clone or [download](https://github.com/lispcoc/cdda_hentai_mod_r/archive/refs/heads/main.zip) this repository.
+1. Clone or [download](https://github.com/lispcoc/cdda_random_enchant/archive/refs/heads/main.zip) this repository.
 2. Create "mods" folder to root folder of your C:DDA .
 3. Place files in /mods/cdda_random_enchant/
 
