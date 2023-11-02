@@ -15,3 +15,6 @@ It may not work properly if placed in the /data/mods folder.
 1. Kill monsters.
 2. Sometimes they drop "Enchanted Crystal"
 3. Use it and enchant your weapons. (Only melee weapons and bows, no guns)
+
+## Languages
+It is mainly written in Japanese. English is also supported.
